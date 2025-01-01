@@ -16,9 +16,10 @@ export default function Leaderboard() {
     );
     let lastPercent = -1;
     let place = 0;
-    for (const player of players) {
+    for (let i = 0; i < players.length; i++) {
+        const player = players[i];
         if (player.percent !== lastPercent) {
-            place++;
+            place = i + 1;
         }
         player.place = place;
         lastPercent = player.percent;
