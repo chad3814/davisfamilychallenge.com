@@ -1,0 +1,321 @@
+{
+  "$schema": "https://davisfamilychallenge.com/dfc-schema.json",
+  "participants": [
+    {
+      "name": "Chad",
+      "wins": 12,
+      "losses": 7,
+      "years": [
+        2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013,
+        2012, 2011, 2010, 2009, 2008, 2007, 2006
+      ],
+      "hide": false
+    },
+    {
+      "name": "J.D.",
+      "wins": 12,
+      "losses": 7,
+      "years": [
+        2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013,
+        2012, 2011, 2010, 2009, 2008, 2007, 2006
+      ],
+      "hide": false
+    },
+    {
+      "name": "Captain",
+      "wins": 9,
+      "losses": 6,
+      "years": [2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012, 2011, 2010, 2009, 2008, 2007, 2006],
+      "hide": true
+    },
+    {
+      "name": "Cat",
+      "wins": 10,
+      "losses": 9,
+      "years": [
+        2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013,
+        2012, 2011, 2010, 2009, 2008, 2007, 2006
+      ],
+      "hide": false
+    },
+    {
+      "name": "Uncle Giant",
+      "wins": 10,
+      "losses": 9,
+      "years": [
+        2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013,
+        2012, 2011, 2010, 2009, 2008, 2007, 2006
+      ],
+      "hide": false
+    },
+    {
+      "name": "Lorelei",
+      "wins": 10,
+      "losses": 9,
+      "years": [
+        2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013,
+        2012, 2011, 2010, 2009, 2008, 2007, 2006
+      ],
+      "hide": false
+    },
+    {
+      "name": "Grammy",
+      "wins": 7,
+      "losses": 12,
+      "years": [
+        2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013,
+        2012, 2011, 2010, 2009, 2008, 2007, 2006
+      ],
+      "hide": false
+    },
+    {
+      "name": "Eddie",
+      "wins": 4,
+      "losses": 8,
+      "years": [
+        2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013
+      ],
+      "hide": false
+    },
+    {
+      "name": "Shep",
+      "wins": 0,
+      "losses": 1,
+      "years": [2024],
+      "hide": false
+    },
+    {
+      "name": "Steph",
+      "wins": 1,
+      "losses": 2,
+      "years": [2016, 2015, 2014],
+      "hide": true
+    },
+    {
+      "name": "Katie",
+      "wins": 0,
+      "losses": 1,
+      "years": [2012],
+      "hide": true
+    },
+    {
+      "name": "Jenelle",
+      "wins": 0,
+      "losses": 2,
+      "years": [2010, 2008],
+      "hide": true
+    }
+  ],
+  "years": [
+    {
+      "year": 2024,
+      "teamScheme": "Computer Generated Teams",
+      "challengeTheme": "Picked from a container",
+      "winningTeam": "Losers",
+      "teams": [
+        {
+          "name": "Underdogs",
+          "members": ["Grammy", "Cat", "Eddie", "Shep"]
+        },
+        {
+          "name": "Losers",
+          "members": ["Uncle Giant", "J.D.", "Lorelei", "Chad"]
+        }
+      ],
+      "games": [
+        {
+          "name": "Head Hoops",
+          "winner": "Losers",
+          "commentary": "Uncle Giant scored 3 baskets right at the start, sealing an early lead for the Losers."
+        },
+        {
+          "name": "Ball Golf",
+          "winner": "Underdogs",
+          "commentary": "Shep's precise putting gave the Underdogs the edge to secure this win."
+        },
+        {
+          "name": "Candy Cane Drop",
+          "winner": "Underdogs",
+          "commentary": "Grammy and Cat displayed excellent teamwork to win this challenging game."
+        },
+        {
+          "name": "Christmas Slots",
+          "winner": "Losers",
+          "commentary": "Chad's luck and J.D.'s strategy led the Losers to a landslide victory."
+        },
+        {
+          "name": "Santa's Cup Reverse",
+          "winner": "Losers",
+          "commentary": "Lorelei's quick reflexes outmatched the Underdogs in this fast-paced game."
+        }
+      ]
+    },
+    {
+      "year": 2023,
+      "teamScheme": "Unknown",
+      "challengeTheme": "Picked from a container",
+      "winningTeam": "Anotha Won",
+      "teams": [
+        {
+          "name": "Team Awesome",
+          "members": ["Chad", "J.D.", "Eddie"]
+        },
+        {
+          "name": "Anotha Won",
+          "members": ["Uncle Giant", "Grammy", "Lorelei", "Cat"]
+        }
+      ],
+      "games": [
+        {
+          "name": "Guess The Number",
+          "winner": "Anotha Won",
+          "commentary": "Uncle Giant nailed the closest guess to secure the win."
+        },
+        {
+          "name": "Blow-Blow-Blow",
+          "winner": "Anotha Won",
+          "commentary": "Anotha Won's steady hand with marshmallows outpaced Team Awesome."
+        },
+        {
+          "name": "Puzzle Chess",
+          "winner": "Team Awesome",
+          "commentary": "Chad's quick thinking sealed a victory for Team Awesome."
+        },
+        {
+          "name": "Name That Tune",
+          "winner": "Anotha Won",
+          "commentary": "Lorelei's music knowledge dominated this round."
+        },
+        {
+          "name": "Balloon Race",
+          "winner": "Anotha Won",
+          "commentary": "Uncle Giant's lungs proved too strong for the competition."
+        }
+      ]
+    },
+    {
+      "year": 2022,
+      "teamScheme": "Walkers vs. Davises",
+      "challengeTheme": "Picked from a container",
+      "winningTeam": "Walkers",
+      "teams": [
+        {
+          "name": "Walkers",
+          "members": ["Chad", "Cat", "Lorelei", "Eddie"]
+        },
+        {
+          "name": "Davises",
+          "members": ["J.D.", "Grammy", "Uncle Giant"]
+        }
+      ],
+      "games": [
+        {
+          "name": "Ping-Pan-Pong",
+          "winner": "Tie",
+          "commentary": "Both teams managed one successful bounce each."
+        },
+        {
+          "name": "Tongue Tied",
+          "winner": "Walkers",
+          "commentary": "Lorelei secured a critical win with her comeback."
+        },
+        {
+          "name": "Chameleon",
+          "winner": "Walkers",
+          "commentary": "A strong performance by the Walkers in this strategic game."
+        },
+        {
+          "name": "Snow Family",
+          "winner": "Walkers",
+          "commentary": "Lorelei's speed clinched the victory in sudden death."
+        },
+        {
+          "name": "Burn the House Down",
+          "winner": "Davises",
+          "commentary": "The Davises excelled in blowing out the candles quickly."
+        }
+      ]
+    },
+    {
+      "year": 2021,
+      "teamScheme": "Drew cards",
+      "challengeTheme": "Picked from a container",
+      "winningTeam": "Red Cards",
+      "teams": [
+        {
+          "name": "Black Cards",
+          "members": ["Chad", "Grammy", "Uncle Giant", "Eddie"]
+        },
+        {
+          "name": "Red Cards",
+          "members": ["J.D.", "Cat", "Lorelei"]
+        }
+      ],
+      "games": [
+        {
+          "name": "On the Dot",
+          "winner": "Red Cards",
+          "commentary": "J.D. and Chad finished quickly, propelling the Red Cards to victory."
+        },
+        {
+          "name": "Cribbage",
+          "winner": "Black Cards",
+          "commentary": "The Black Cards won by outscoring in a close game."
+        },
+        {
+          "name": "Puzzles",
+          "winner": "Red Cards",
+          "commentary": "The Red Cards smoked the competition in the puzzle race."
+        },
+        {
+          "name": "Marshmallow Mayhem",
+          "winner": "Red Cards",
+          "commentary": "J.D.'s incredible scoop secured the win for the Red Cards."
+        }
+      ]
+    },
+    {
+      "year": 2020,
+      "teamScheme": "Parents/Non-Parents",
+      "challengeTheme": "Picked from a container",
+      "winningTeam": "Parents",
+      "teams": [
+        {
+          "name": "Parents",
+          "members": ["Cat", "Chad", "Captain", "Grammy"]
+        },
+        {
+          "name": "Non-Parents",
+          "members": ["J.D.", "Lorelei", "Uncle Giant", "Eddie"]
+        }
+      ],
+      "games": [
+        {
+          "name": "I Spy Christmas Tree",
+          "winner": "Non-Parents",
+          "commentary": "The perennial favorite. Grammy has taken close-up pictures of all the ornaments before placing them on a Christmas tree. The Tree is in a revolving stand, and it takes a little less than two minutes for the tree to make a complete revolution. There is a taped off area where players stand and look at the tree, trying to find the random ornament they were given. A maximum of two minutes are allowed per ornament.\nSince Grammy knew where all the ornaments are, she didn't play, leaving the Parents team with three people and the Non-Parents team with four. So each player on the Parents team went four times and each on the Non-Parents team went three times. The 12 times for each team were summed and the quickest time won. Chad started it out with a thud for the Parents by not finding the first ornament, 120 seconds. Eddie went first for the Non-Parents and quickly showed up his dad by finding the ornament in 4.2s. Cat vowed to turn the Parents team around and found her first ornament in 16.3s, but Uncle Giant answered back with 10.3s. Captain presented a stoic glare at the tree, and found his ornament in 33.3s. Even Lorelei's 69.0s score couldn't drag down the Non-Parent team. Chad, looking for redemption after being shut-out the first time, struggled again, but eventually found it in 76.4s. J.D. finished Non-Parents first round with solid 5.4s. Unfortunately, Cat couldn't find her second ornament, scoring 120s. Eddie, struggled and also couldn't find his second ornament, 120s. Captain, realizing that the Parents were heading for a loss in the first game, tried to delay with ideas of how to improve the game next year, in the end he was forced to play and found his second ornament in 105.7s. Uncle Giant got an easy pick, a santa baseball, and found it in 8.3s. Starting the Parents third round, Chad was super nervous, but hadn't yet given up; maybe he should've, he found the ornament from the first round, but failed to find the correct one this time, another 120s. Despite cheating by putting her phone across the line, Lorelei failed to find her second ornament for the Non-Parents team, 120s. Cat, meanwhile, was ready for a fight! She was fired up and found her ornament in a Parents team record of 6.7s. J.D. was cocky, yet it took him over a minute to find his, 63.3s. Buoyed by Cat's quick performance and J.D.'s relatively slow one, Captain remarked that we might as well mark him down as 10s, alas, he didn't find it, 120s. Everyone had noticed an all-black figurine near the bottom, and Eddie hoped to get it, thinking it was a ninja; he didn't get it, but found his in 24.8s. Starting the Parent's last round, Chad got a PR with 26.0s, however, Uncle Giant was then given an easy candy cane and scored 13.5s. Cat, still full of confidence from the last round, strode up to the tree and found the ornament in 17s even. Lorelei was excited to be looking for a bird ornament and found it easily, 10.4s. The Captain, already figuring out the Parents Team's fate was far less cocky, he found a moon ornament in under half a minute, 29.8s. The last player of the game, J.D., found it in 31.5s. In total, the Parents took 791.2 seconds to find their ornaments, while the Non-Parents took only 480.7 seconds. Non-Parents Win!"
+        },
+        {
+          "name": "Sip-Sip-Suck",
+          "winner": "Non-Parents",
+          "commentary": "A game from TikTok, each player took turns holding a solo cup with a straw under a running faucet. The player had to continually drink the water through the straw, until thee cup overflowed. The players were timed, and all the team's player's times were added together, the team that lasted the longest won.\nChad once again went first, and set a baseline of 23.9 seconds. Eddie, who is physically smaller than the rest, lasted only 16.7s. Captain show his camel-like instincts and it took 25.3s for the water to overflow. Lorelei continued the trend of each teams' players going longer, she lasted 20.8s. Cat scored the Parent team record of 26.2s, but J.D. fired back with 29.2! Grammy, just assumed the Parents had it in the sewn up, she sandbagged 23.1s. Uncle Giant went last, and wanted to know how long he needed to last for the Non-Parents to pull out a win. Chad quickly estimated, \"I'm sure you'll win if you make it to 40 seconds,\" thinking that that was an absurd amount of time. Uncle Giant put in a massive effort for the Non-Parents and maintained a spill-free cup for 49 seconds! That did give the victory to the Non-Parents, who were now up 2-0."
+        },
+        {
+          "name": "TP Roll Up",
+          "winner": "Parents",
+          "commentary": "In this game, one from each team try pulling a solo cup (which is about 1/3rd full of water) down the length of the table. The cup is on the end of a roll of toilet paper. The teams compete head-to-head, scoring a team point for the person that gets their cup to the end first.\nAfter a quick demonstration, (Unfortunately records cut off here)"
+        },
+        {
+          "name": "Everybody Knows",
+          "winner": "Parents",
+          "commentary": "Using the trivia question cards from the game Everybody Knows, each player is read and answers as many questions as possible in two minutes. The reader is someone from their team, and the total number of correctly answered questions is the score."
+        },
+        {
+          "name": "Egg Smash",
+          "winner": "Parents",
+          "commentary": "Another game from TikTok. There's an egg under a clear plastic tupperware container. One player from each team stands on either side a table with the egg in the middle, and take turns smacking the container or grabbing the container. The first player to break the egg loses. The team with the least broken eggs wins."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "https://davisfamilychallenge.com/dfc-schema.json",
+  "title": "Davis Family Challenge",
+  "description": "Data for the years the DFC has been played",
+  "type": "object",
+  "properties": {
+    "participatants": {
+      "description": "Anybody that has participated in a DFC",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "wins": {
+            "type": "number"
+          },
+          "losses": {
+            "type": "number"
+          },
+          "years": {
+            "description": "The years in which this person competed",
+            "type": "array",
+            "items": {
+              "type": "number",
+              "minimum": 2006,
+              "multipleOf": 1
+            }
+          },
+          "hide": {
+            "type": "boolean"
+          }
+        },
+        "required": [ "name", "wins", "losses", "years" ]
+      }
+    },
+    "years": {
+      "type": "array",
+      "items": {
+        "description": "A year",
+        "type": "object",
+        "properties": {
+          "year": {
+            "description": "The year this data describes",
+            "type": "number",
+            "minimum": 2006,
+            "multipleOf": 1
+          },
+          "teamScheme": {
+            "description": "How the teams were picked",
+            "type": "string"
+          },
+          "challengeTheme": {
+            "description": "How the games were picked",
+            "type": "string"
+          },
+          "winningTeam": {
+            "type": "string"
+          },
+          "teams": {
+            "description": "Each team participating",
+            "type": "array",
+            "items": {
+              "properties": {
+                "name": {
+                  "description": "The team name",
+                  "type": "string"
+                },
+                "members": {
+                  "description": "The members of the team",
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "games": {
+            "description": "A list of the games played",
+            "type": "array",
+            "items": {
+              "description": "An individual game",
+              "type": "object",
+              "properties": {
+                "name": {
+                  "description": "The game name",
+                  "type": "string"
+                },
+                "winner": {
+                  "description": "The winning team name",
+                  "type": "string"
+                },
+                "commentary": {
+                  "description": "The play-by-play for the game",
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
