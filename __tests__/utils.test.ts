@@ -1,4 +1,4 @@
-import { formatRecord, calculateWinningPercentage, getOrdinalName, sortByWinningPercentage } from '@/lib/utils';
+import { formatRecord, calculateWinningPercentage, getOrdinalName, sortByWinningPercentage, calculateGamesPlayed } from '@/lib/utils';
 import { ScoreboardEntry } from '@/types';
 
 describe('Utility Functions', () => {
@@ -42,17 +42,20 @@ describe('Utility Functions', () => {
         {
           participant: 'Player A',
           record: { wins: 5, losses: 5, winningPercentage: 0.5 },
-          standing: 0
+          standing: 0,
+          gamesPlayed: 10
         },
         {
           participant: 'Player B',
           record: { wins: 10, losses: 5, winningPercentage: 0.667 },
-          standing: 0
+          standing: 0,
+          gamesPlayed: 15
         },
         {
           participant: 'Player C',
           record: { wins: 3, losses: 7, winningPercentage: 0.3 },
-          standing: 0
+          standing: 0,
+          gamesPlayed: 10
         }
       ];
 
@@ -60,6 +63,38 @@ describe('Utility Functions', () => {
       expect(sorted[0].participant).toBe('Player B');
       expect(sorted[1].participant).toBe('Player A');
       expect(sorted[2].participant).toBe('Player C');
+    });
+  });
+
+  describe('calculateGamesPlayed', () => {
+    it('should calculate total games played from wins and losses', () => {
+      expect(calculateGamesPlayed(12, 7)).toBe(19);
+      expect(calculateGamesPlayed(10, 9)).toBe(19);
+      expect(calculateGamesPlayed(8, 11)).toBe(19);
+    });
+
+    it('should handle zero wins', () => {
+      expect(calculateGamesPlayed(0, 5)).toBe(5);
+      expect(calculateGamesPlayed(0, 1)).toBe(1);
+    });
+
+    it('should handle zero losses', () => {
+      expect(calculateGamesPlayed(10, 0)).toBe(10);
+      expect(calculateGamesPlayed(1, 0)).toBe(1);
+    });
+
+    it('should handle equal records', () => {
+      expect(calculateGamesPlayed(5, 5)).toBe(10);
+      expect(calculateGamesPlayed(9, 9)).toBe(18);
+    });
+
+    it('should handle both zero (no games played)', () => {
+      expect(calculateGamesPlayed(0, 0)).toBe(0);
+    });
+
+    it('should handle large numbers', () => {
+      expect(calculateGamesPlayed(100, 50)).toBe(150);
+      expect(calculateGamesPlayed(999, 1)).toBe(1000);
     });
   });
 });

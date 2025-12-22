@@ -1,12 +1,13 @@
 'use client';
 
 import Link from 'next/link';
-import { getYearsList } from '@/lib/data';
 import { useState } from 'react';
 
 export default function Navigation() {
-  const years = getYearsList();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  // Show only last 3 years plus All Years link
+  const recentYears = [2024, 2023, 2022];
 
   return (
     <nav className="bg-gray-100 border-b border-gray-300 sticky top-0 z-50">
@@ -21,7 +22,7 @@ export default function Navigation() {
           </Link>
 
           <div className="flex flex-wrap gap-3">
-            {years.map((year) => (
+            {recentYears.map((year) => (
               <Link
                 key={year}
                 href={`/${year}/`}
@@ -30,6 +31,12 @@ export default function Navigation() {
                 {year}
               </Link>
             ))}
+            <Link
+              href="/all-years"
+              className="px-3 py-1 text-blue-600 hover:text-blue-800 hover:underline transition-colors"
+            >
+              All Years
+            </Link>
           </div>
         </div>
 
@@ -45,7 +52,7 @@ export default function Navigation() {
 
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="p-2 rounded-md hover:bg-gray-200 transition-colors"
+              className="p-2 rounded-md hover:bg-gray-200 transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center"
               aria-label="Toggle menu"
               aria-expanded={isMenuOpen}
             >
@@ -77,8 +84,8 @@ export default function Navigation() {
           {/* Mobile Menu */}
           {isMenuOpen && (
             <div className="pb-4">
-              <div className="grid grid-cols-3 gap-2">
-                {years.map((year) => (
+              <div className="grid grid-cols-2 gap-2">
+                {recentYears.map((year) => (
                   <Link
                     key={year}
                     href={`/${year}/`}
@@ -88,6 +95,13 @@ export default function Navigation() {
                     {year}
                   </Link>
                 ))}
+                <Link
+                  href="/all-years"
+                  className="px-3 py-2 text-center text-blue-600 hover:bg-gray-200 rounded transition-colors min-h-[44px] flex items-center justify-center col-span-2"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  All Years
+                </Link>
               </div>
             </div>
           )}

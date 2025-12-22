@@ -27,11 +27,11 @@ export default async function YearPage({ params }: YearPageProps) {
   return (
     <Layout>
       <div className="max-w-4xl mx-auto">
-        <h1 className="text-4xl font-bold text-center mb-8">
+        <h1 className="text-4xl font-bold text-center mb-8 text-blue-600">
           {yearData.ordinalName}
         </h1>
 
-        <div className="mb-8 p-6 bg-gray-50 rounded-lg border border-gray-300">
+        <div className="mb-8 p-6 bg-blue-50 rounded-lg border border-blue-500">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
               <span className="font-semibold">Team Scheme:</span> {yearData.teamScheme}
@@ -50,7 +50,7 @@ export default async function YearPage({ params }: YearPageProps) {
 
         {/* Game Narratives */}
         <div className="mt-12">
-          <h2 className="text-3xl font-bold mb-6">Games</h2>
+          <h2 className="text-3xl font-bold mb-6 text-blue-600">Games</h2>
           {yearData.games.map((game, index) => (
             <GameNarrative key={index} game={game} />
           ))}

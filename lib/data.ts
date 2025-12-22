@@ -1,4 +1,5 @@
 import { ScoreboardData, YearData, Year, isScoreboardData, isYearData } from '@/types';
+import { calculateGamesPlayed } from './utils';
 import scoreboardJson from '@/data/scoreboard.json';
 
 // Valid years range
@@ -14,7 +15,17 @@ export function getScoreboardData(): ScoreboardData {
   if (!isScoreboardData(scoreboardJson)) {
     throw new Error('Invalid scoreboard data structure');
   }
-  return scoreboardJson;
+
+  // Add gamesPlayed to each entry
+  const enrichedEntries = scoreboardJson.entries.map(entry => ({
+    ...entry,
+    gamesPlayed: calculateGamesPlayed(entry.record.wins, entry.record.losses)
+  }));
+
+  return {
+    ...scoreboardJson,
+    entries: enrichedEntries
+  };
 }
 
 /**

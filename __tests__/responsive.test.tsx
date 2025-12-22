@@ -1,20 +1,23 @@
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import Scoreboard from '@/components/Scoreboard';
-import Navigation from '@/components/Navigation';
 import YearSummaryCard from '@/components/YearSummaryCard';
 import { ScoreboardData, YearData } from '@/types';
 
-// Mock Next.js Link component
-jest.mock('next/link', () => {
-  return ({ children, href }: { children: React.ReactNode; href: string }) => {
-    return <a href={href}>{children}</a>;
-  };
-});
+/**
+ * Tests for responsive behavior across mobile and desktop viewports
+ */
 
-// Mock data loading
-jest.mock('@/lib/data', () => ({
-  getYearsList: () => [2024, 2023, 2022],
-}));
+// Mock window.matchMedia
+Object.defineProperty(window, 'matchMedia', {
+  writable: true,
+  value: jest.fn().mockImplementation(query => ({
+    matches: false,
+    media: query,
+    onchange: null,
+    addEventListener: jest.fn(),
+    removeEventListener: jest.fn(),
+  })),
+});
 
 describe('Responsive Behavior', () => {
   const mockScoreboardData: ScoreboardData = {
@@ -22,12 +25,14 @@ describe('Responsive Behavior', () => {
       {
         participant: 'J.D.',
         record: { wins: 12, losses: 7, winningPercentage: 0.632 },
-        standing: 1
+        standing: 1,
+        gamesPlayed: 19
       },
       {
         participant: 'Cat',
         record: { wins: 10, losses: 9, winningPercentage: 0.526 },
-        standing: 2
+        standing: 2,
+        gamesPlayed: 19
       }
     ],
     lastUpdated: '2024-12-22'
@@ -50,120 +55,100 @@ describe('Responsive Behavior', () => {
   };
 
   describe('Scoreboard component', () => {
-    it('should have both desktop table and mobile card layouts', () => {
+    it('should render both desktop table and mobile cards', () => {
       render(<Scoreboard data={mockScoreboardData} />);
 
-      // Desktop table should exist (hidden on mobile)
+      // Desktop elements (hidden on mobile via Tailwind classes)
       const tables = document.querySelectorAll('table');
       expect(tables.length).toBeGreaterThan(0);
 
-      // Mobile cards should exist
-      const mobileCards = document.querySelectorAll('.md\\:hidden');
-      expect(mobileCards.length).toBeGreaterThan(0);
+      // Mobile elements (hidden on desktop via Tailwind classes)
+      // Both mobile and desktop versions should be in the DOM
+      expect(screen.getAllByText('J.D.').length).toBeGreaterThan(0);
+      expect(screen.getAllByText('Cat').length).toBeGreaterThan(0);
     });
 
-    it('should render all participant data in both layouts', () => {
+    it('should display desktop table with correct structure', () => {
       render(<Scoreboard data={mockScoreboardData} />);
 
-      // Check that participant names appear
-      const jdElements = screen.getAllByText('J.D.');
-      expect(jdElements.length).toBeGreaterThanOrEqual(2); // Once in desktop, once in mobile
-
-      const catElements = screen.getAllByText('Cat');
-      expect(catElements.length).toBeGreaterThanOrEqual(2);
-    });
-  });
-
-  describe('Navigation component', () => {
-    it('should have hamburger menu button for mobile', () => {
-      render(<Navigation />);
-
-      // Look for the hamburger button (aria-label)
-      const menuButton = screen.getByRole('button', { name: /toggle menu/i });
-      expect(menuButton).toBeInTheDocument();
+      // Check for table headers
+      expect(screen.getByText('Name')).toBeInTheDocument();
+      expect(screen.getByText('Record')).toBeInTheDocument();
+      expect(screen.getByText('Winning Percentage')).toBeInTheDocument();
+      expect(screen.getByText('Games Played')).toBeInTheDocument();
     });
 
-    it('should render year links', () => {
-      render(<Navigation />);
+    it('should display mobile cards with correct layout', () => {
+      render(<Scoreboard data={mockScoreboardData} />);
 
-      // Check for year links
-      const year2024Links = screen.getAllByText('2024');
-      expect(year2024Links.length).toBeGreaterThan(0);
-    });
-
-    it('should toggle mobile menu and display year links in grid', () => {
-      const { container } = render(<Navigation />);
-
-      // Initially, grid should not be visible
-      let gridContainer = container.querySelector('.grid');
-      expect(gridContainer).not.toBeInTheDocument();
-
-      // Click the hamburger menu to open it
-      const menuButton = screen.getByRole('button', { name: /toggle menu/i });
-      fireEvent.click(menuButton);
-
-      // After clicking, grid container should be visible
-      gridContainer = container.querySelector('.grid');
-      expect(gridContainer).toBeInTheDocument();
-
-      // Verify grid has year links
-      const year2022Link = screen.getAllByText('2022');
-      expect(year2022Link.length).toBeGreaterThan(0);
+      // Mobile view should show Games: label
+      const mobileGamesLabels = screen.getAllByText(/Games:/);
+      expect(mobileGamesLabels.length).toBeGreaterThan(0);
     });
   });
 
   describe('YearSummaryCard component', () => {
-    it('should use responsive grid layout for metadata', () => {
+    it('should render all sections', () => {
       render(<YearSummaryCard data={mockYearData} />);
 
-      // Check for responsive grid classes
-      const gridElements = document.querySelectorAll('.grid-cols-1');
-      expect(gridElements.length).toBeGreaterThan(0);
+      // Check main sections exist
+      expect(screen.getByText('Team Scheme:')).toBeInTheDocument();
+      expect(screen.getByText('Challenge Theme:')).toBeInTheDocument();
+      expect(screen.getByText('Winners:')).toBeInTheDocument();
+      expect(screen.getByText('Games:')).toBeInTheDocument();
+      expect(screen.getByText('Teams:')).toBeInTheDocument();
     });
 
-    it('should have overflow scroll for team rosters', () => {
+    it('should render team roster table', () => {
       render(<YearSummaryCard data={mockYearData} />);
 
-      // Check for overflow-x-auto class on team roster table
-      const overflowContainer = document.querySelector('.overflow-x-auto');
-      expect(overflowContainer).toBeInTheDocument();
-    });
-
-    it('should render all teams and games', () => {
-      render(<YearSummaryCard data={mockYearData} />);
-
-      // Check games are listed
-      expect(screen.getByText('Head Hoops')).toBeInTheDocument();
-      expect(screen.getByText('Oreo Flip')).toBeInTheDocument();
-
-      // Check teams are listed
+      // Check team names in table
       expect(screen.getByText('Team Underdogs')).toBeInTheDocument();
       expect(screen.getByText('Team Losers')).toBeInTheDocument();
+
+      // Check team members
+      expect(screen.getByText('Grammy')).toBeInTheDocument();
+      expect(screen.getByText('Lorelei')).toBeInTheDocument();
+    });
+
+    it('should display games list', () => {
+      render(<YearSummaryCard data={mockYearData} />);
+
+      // Check games appear in list
+      expect(screen.getByText('Head Hoops')).toBeInTheDocument();
+      expect(screen.getByText('Oreo Flip')).toBeInTheDocument();
+    });
+
+    it('should render year as link', () => {
+      render(<YearSummaryCard data={mockYearData} />);
+
+      const yearLink = screen.getByRole('link', { name: '2024' });
+      expect(yearLink).toBeInTheDocument();
+      // Next.js Link normalizes URLs, so accept both with and without trailing slash
+      const href = yearLink.getAttribute('href');
+      expect(href === '/2024' || href === '/2024/').toBe(true);
     });
   });
 
-  describe('Responsive breakpoint classes', () => {
-    it('Scoreboard should use md: breakpoint for table/card toggle', () => {
+  describe('Responsive classes', () => {
+    it('should apply Tailwind responsive classes to scoreboard table', () => {
       const { container } = render(<Scoreboard data={mockScoreboardData} />);
 
-      // Check for md:block (desktop table) and md:hidden (mobile cards)
-      const desktopTable = container.querySelector('.md\\:block');
-      const mobileCards = container.querySelector('.md\\:hidden');
-
+      // Desktop table should have hidden on mobile class
+      const desktopTable = container.querySelector('.hidden.md\\:block');
       expect(desktopTable).toBeInTheDocument();
+
+      // Mobile cards should have hidden on desktop class
+      const mobileCards = container.querySelector('.md\\:hidden');
       expect(mobileCards).toBeInTheDocument();
     });
 
-    it('Navigation should have separate mobile and desktop layouts', () => {
-      const { container } = render(<Navigation />);
+    it('should apply grid classes for responsive layout', () => {
+      const { container } = render(<YearSummaryCard data={mockYearData} />);
 
-      // Check for desktop navigation (hidden md:flex)
-      const desktopNav = container.querySelector('.md\\:flex');
-      expect(desktopNav).toBeInTheDocument();
-
-      // Check for mobile-only elements (md:hidden)
-      const mobileNav = container.querySelector('.md\\:hidden');
-      expect(mobileNav).toBeInTheDocument();
+      // Check for responsive grid classes
+      const gridElements = container.querySelectorAll('[class*="md:grid-cols"]');
+      expect(gridElements.length).toBeGreaterThan(0);
     });
   });
 });

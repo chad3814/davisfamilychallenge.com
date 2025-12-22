@@ -5,5 +5,23 @@
   "challengeTheme": "Scavenger Hunt",
   "winners": "Boys",
   "games": [],
-  "teams": []
+  "teams": [
+    {
+      "name": "Girls",
+      "members": [
+        "Lorelei",
+        "Grammy",
+        "Cat"
+      ]
+    },
+    {
+      "name": "Boys",
+      "members": [
+        "Captain",
+        "J.D.",
+        "Uncle Giant",
+        "Chad"
+      ]
+    }
+  ]
 }

@@ -26,6 +26,13 @@ export function formatRecord(wins: number, losses: number): string {
 }
 
 /**
+ * Calculate total games played from wins and losses
+ */
+export function calculateGamesPlayed(wins: number, losses: number): number {
+  return wins + losses;
+}
+
+/**
  * Get ordinal name for year
  * Maps year number (1-19) to ordinal string
  */

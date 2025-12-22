@@ -14,6 +14,7 @@ export interface ScoreboardEntry {
   participant: string;
   record: ParticipantRecord;
   standing: number;
+  gamesPlayed: number;
 }
 
 export interface ScoreboardData {
@@ -45,6 +46,23 @@ export interface YearData {
   narratives?: string;
   images?: string[];
   videos?: string[];
+}
+
+// Accordion component types
+export interface AccordionSectionProps {
+  year: number;
+  content: React.ReactNode;
+  isExpanded: boolean;
+  onToggle: () => void;
+  id: string;
+}
+
+// TOC Navigation component types
+export interface TOCNavigationProps {
+  years: number[];
+  activeYear: number | null;
+  onYearClick: (year: number) => void;
+  isMobile?: boolean;
 }
 
 // Utility types

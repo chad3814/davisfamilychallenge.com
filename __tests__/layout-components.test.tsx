@@ -29,20 +29,25 @@ describe('Layout Components', () => {
   });
 
   describe('Navigation', () => {
-    it('should render all year links in descending order', () => {
+    it('should render only last 3 years plus All Years link', () => {
       render(<Navigation />);
 
-      // Check that 2024 link exists
+      // Check that 2024, 2023, 2022 links exist
       const link2024 = screen.getByRole('link', { name: '2024' });
       expect(link2024).toBeInTheDocument();
       expect(link2024).toHaveAttribute('href');
       expect(link2024.getAttribute('href')).toContain('2024');
 
-      // Check that 2006 link exists
-      const link2006 = screen.getByRole('link', { name: '2006' });
-      expect(link2006).toBeInTheDocument();
-      expect(link2006).toHaveAttribute('href');
-      expect(link2006.getAttribute('href')).toContain('2006');
+      const link2023 = screen.getByRole('link', { name: '2023' });
+      expect(link2023).toBeInTheDocument();
+
+      const link2022 = screen.getByRole('link', { name: '2022' });
+      expect(link2022).toBeInTheDocument();
+
+      // Check All Years link
+      const allYearsLink = screen.getByRole('link', { name: 'All Years' });
+      expect(allYearsLink).toBeInTheDocument();
+      expect(allYearsLink).toHaveAttribute('href', '/all-years');
 
       // Check home link
       const homeLinks = screen.getAllByRole('link', { name: /Davis Family Challenge/i });
@@ -50,12 +55,34 @@ describe('Layout Components', () => {
       expect(homeLinks[0]).toHaveAttribute('href', '/');
     });
 
-    it('should render exactly 19 year links', () => {
+    it('should NOT render year 2021 or older in navigation', () => {
       render(<Navigation />);
-      const yearLinks = screen.getAllByRole('link').filter(link =>
-        /^20(0[6-9]|1[0-9]|2[0-4])$/.test(link.textContent || '')
-      );
-      expect(yearLinks).toHaveLength(19);
+
+      // Query for 2021 link - should not exist
+      const link2021 = screen.queryByRole('link', { name: '2021' });
+      expect(link2021).not.toBeInTheDocument();
+
+      // Query for 2006 link - should not exist
+      const link2006 = screen.queryByRole('link', { name: '2006' });
+      expect(link2006).not.toBeInTheDocument();
+    });
+
+    it('should apply blue color scheme to links', () => {
+      render(<Navigation />);
+
+      // Check that year links have blue color classes
+      const link2024 = screen.getByRole('link', { name: '2024' });
+      expect(link2024.className).toContain('text-blue-600');
+      expect(link2024.className).toContain('hover:text-blue-800');
+    });
+
+    it('should have accessible touch targets on mobile', () => {
+      render(<Navigation />);
+
+      // Check hamburger button has min-h-[44px]
+      const toggleButton = screen.getByRole('button', { name: /toggle menu/i });
+      expect(toggleButton.className).toContain('min-h-[44px]');
+      expect(toggleButton.className).toContain('min-w-[44px]');
     });
   });
 

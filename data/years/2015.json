@@ -7,40 +7,45 @@
   "games": [
     {
       "name": "Ten Thousand",
-      "description": "Steph's game was first, and she started out strong, scoring in\nthe first nine rounds, and dominating the early game. We decided\nbefore play started to go to 8,000 instead of 10,000. In the tenth\nround Grammy 2,200 points to jump into the lead. She hit 8,000 in the\n13th round, and nobody caught her despite Eddie nearly getting 3,150\nin the last round. Team Eddie won.\n\nGrammy's game of I Spy, was played with a revolving Christmas\nTree. Players drew a card that had a picture of a random ornament on\nit and they were timed to find the ornament on the tree. Team Eddie\nhad a big lead that Team Steph was unable to overcome. Team Eddie won\n22:07 to Team Steph's 22:51 (despite the late argument about Uncle\nGiant's reach around)."
+      "description": "Steph's game was first, and she started out strong, scoring in\nthe first nine rounds, and dominating the early game. We decided\nbefore play started to go to 8,000 instead of 10,000. In the tenth\nround Grammy 2,200 points to jump into the lead. She hit 8,000 in the\n13th round, and nobody caught her despite Eddie nearly getting 3,150\nin the last round. Team Eddie won."
     },
     {
-      "name": "Ten Thousand",
-      "description": "Steph's game was first, and she started out strong, scoring in\nthe first nine rounds, and dominating the early game. We decided\nbefore play started to go to 8,000 instead of 10,000. In the tenth\nround Grammy 2,200 points to jump into the lead. She hit 8,000 in the\n13th round, and nobody caught her despite Eddie nearly getting 3,150\nin the last round. Team Eddie won.\n\nGrammy's game of I Spy, was played with a revolving Christmas\nTree. Players drew a card that had a picture of a random ornament on\nit and they were timed to find the ornament on the tree. Team Eddie\nhad a big lead that Team Steph was unable to overcome. Team Eddie won\n22:07 to Team Steph's 22:51 (despite the late argument about Uncle\nGiant's reach around)."
-    },
-    {
-      "name": "Ten Thousand",
-      "description": "Steph's game was first, and she started out strong, scoring in\nthe first nine rounds, and dominating the early game. We decided\nbefore play started to go to 8,000 instead of 10,000. In the tenth\nround Grammy 2,200 points to jump into the lead. She hit 8,000 in the\n13th round, and nobody caught her despite Eddie nearly getting 3,150\nin the last round. Team Eddie won.\n\nGrammy's game of I Spy, was played with a revolving Christmas\nTree. Players drew a card that had a picture of a random ornament on\nit and they were timed to find the ornament on the tree. Team Eddie\nhad a big lead that Team Steph was unable to overcome. Team Eddie won\n22:07 to Team Steph's 22:51 (despite the late argument about Uncle\nGiant's reach around)."
+      "name": "I Spy",
+      "description": "Grammy's game of I Spy, was played with a revolving Christmas\nTree. Players drew a card that had a picture of a random ornament on\nit and they were timed to find the ornament on the tree. Team Eddie\nhad a big lead that Team Steph was unable to overcome. Team Eddie won\n22:07 to Team Steph's 22:51 (despite the late argument about Uncle\nGiant's reach around)."
     },
     {
       "name": "King of Tokyo",
       "description": "Eddie's Game was King of Tokyo. Each team fielded a duo\ncontrolling a monster. Eddie/Uncle Giant, Chad/Captain, J.D./Grammy,\nCat/Lorelei. Eddie & Uncle Giant got the victory, giving Team Eddie a\nthree-game sweep! The other duos were all close in experience and\nhealth."
     },
     {
-      "name": "King of Tokyo",
-      "description": "Eddie's Game was King of Tokyo. Each team fielded a duo\ncontrolling a monster. Eddie/Uncle Giant, Chad/Captain, J.D./Grammy,\nCat/Lorelei. Eddie & Uncle Giant got the victory, giving Team Eddie a\nthree-game sweep! The other duos were all close in experience and\nhealth."
-    },
-    {
-      "name": "The Pie Eating Contest",
+      "name": "In Your Face: The Pie Eating Contest",
       "description": "We didn't get to Lorelei's game, where teams would have had to\neat a slice of chocolate pie without using their hands."
-    },
-    {
-      "name": "The Pie Eating Contest",
-      "description": "We didn't get to Lorelei's game, where teams would have had to\neat a slice of chocolate pie without using their hands."
-    },
-    {
-      "name": "Pictionary",
-      "description": "We didn't get to Uncle Giant's game."
     },
     {
       "name": "Pictionary",
       "description": "We didn't get to Uncle Giant's game."
     }
   ],
-  "teams": []
+  "teams": [
+    {
+      "name": "Team&nbsp;Steph",
+      "members": [
+        "Steph",
+        "Captain",
+        "Cat",
+        "Chad",
+        "Lorelei"
+      ]
+    },
+    {
+      "name": "Team&nbsp;Eddie",
+      "members": [
+        "Eddie",
+        "Uncle Giant",
+        "J.D.",
+        "Grammy",
+        "Meredith (Honory)"
+      ]
+    }
+  ]
 }

@@ -10,14 +10,6 @@
       "description": "The Tails' teamwork narrowly defeated the Heads. They completed\ntheir 12 Rudolphs first."
     },
     {
-      "name": "Candy Cane Rudolphs",
-      "description": "The Tails' teamwork narrowly defeated the Heads. They completed\ntheir 12 Rudolphs first."
-    },
-    {
-      "name": "Are You Smarter Than a Fifth Grader",
-      "description": "After three rounds of five questions each, both teams were tied\nat 14. We did a shoot-out and the Tails got their question and the\nHeads failed."
-    },
-    {
       "name": "Are You Smarter Than a Fifth Grader",
       "description": "After three rounds of five questions each, both teams were tied\nat 14. We did a shoot-out and the Tails got their question and the\nHeads failed."
     },
@@ -26,25 +18,32 @@
       "description": "The Heads thoroughly destroyed the Tails 13-9."
     },
     {
-      "name": "Magnetic Rocket Toss",
-      "description": "The Heads thoroughly destroyed the Tails 13-9."
-    },
-    {
       "name": "House of Cards",
       "description": "High on their Magnetic Rocket Toss victory, the Heads were the\nfirst team to think of bending the cards in half to make them\nstand. They got their cards into a single structure first."
-    },
-    {
-      "name": "House of Cards",
-      "description": "High on their Magnetic Rocket Toss victory, the Heads were the\nfirst team to think of bending the cards in half to make them\nstand. They got their cards into a single structure first."
-    },
-    {
-      "name": "Hong Kong",
-      "description": "The Tails took a commanding lead winning the first two games in a\nbest of five match. The Heads tried to get something started with a W\nin the third game, but the Tails rallied for the win in the fourth game."
     },
     {
       "name": "Hong Kong",
       "description": "The Tails took a commanding lead winning the first two games in a\nbest of five match. The Heads tried to get something started with a W\nin the third game, but the Tails rallied for the win in the fourth game."
     }
   ],
-  "teams": []
+  "teams": [
+    {
+      "name": "Heads",
+      "members": [
+        "Captain",
+        "Uncle Giant",
+        "Cat",
+        "Eddie (Honory)"
+      ]
+    },
+    {
+      "name": "Tails",
+      "members": [
+        "Grammy",
+        "J.D.",
+        "Chad",
+        "Lorelei"
+      ]
+    }
+  ]
 }

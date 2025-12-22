@@ -15,7 +15,7 @@
     },
     {
       "name": "J.D.'s Game: Chameleon",
-      "description": "J.D. brought board game <a href=\"https://boardgamegeek.com/boardgame/227072/chameleon\">The Chameleon</a>. Walkers had someone sit out each round and we played the game normally. Whichever team got the most correct each round scored a point. Since there were four Walkers, we said we'd play four rounds and if we tied again, we'd play seven. First round, Cat failed her job as Chameleon, and the Davises scored. Next round, J.D. fooled everyone and the Davises went up by two. The Walkers however came back to win the next two, so we had to go to seven rounds. In came down to the wire with the Walkers winning the final round and the game, 4-3."
+      "description": "J.D. brought board game [The Chameleon](https://boardgamegeek.com/boardgame/227072/chameleon). Walkers had someone sit out each round and we played the game normally. Whichever team got the most correct each round scored a point. Since there were four Walkers, we said we'd play four rounds and if we tied again, we'd play seven. First round, Cat failed her job as Chameleon, and the Davises scored. Next round, J.D. fooled everyone and the Davises went up by two. The Walkers however came back to win the next two, so we had to go to seven rounds. In came down to the wire with the Walkers winning the final round and the game, 4-3."
     },
     {
       "name": "Cat's Game: Snow Family",
@@ -23,7 +23,7 @@
     },
     {
       "name": "Chad's Game: Flour Tower",
-      "description": "Flour Tower failed, so Chad's backup game was <a href=\"https://wheel.chadshost.xyz\">Wheel of Fortune</a>. Despite everyone knowing how the game is played there were constant questions. Each team had two players, but the other teammates could help. After four puzzles, the player won a puzzle, but the Davises had more money, Davis family win! Now Walkers have two wins, Davises have one win, and two ties. We drew new games, going until one team has three wins."
+      "description": "Flour Tower failed, so Chad's backup game was [Wheel of Fortune](https://wheel.chadshost.xyz). Despite everyone knowing how the game is played there were constant questions. Each team had two players, but the other teammates could help. After four puzzles, the player won a puzzle, but the Davises had more money, Davis family win! Now Walkers have two wins, Davises have one win, and two ties. We drew new games, going until one team has three wins."
     },
     {
       "name": "Eddie's Game: Burn the House Down",
@@ -34,5 +34,23 @@
       "description": "She had a powerpoint Wheel of Fortune game that was Christmas themed. The Davis team fell to Bankrupt on two different puzzles. Walkers won all four puzzles to win!"
     }
   ],
-  "teams": []
+  "teams": [
+    {
+      "name": "Walkers",
+      "members": [
+        "Chad",
+        "Cat",
+        "Lorelei",
+        "Eddie"
+      ]
+    },
+    {
+      "name": "Davises",
+      "members": [
+        "J.D.",
+        "Grammy",
+        "Uncle Giant"
+      ]
+    }
+  ]
 }

@@ -7,12 +7,20 @@
   "games": [],
   "teams": [
     {
-      "name": "No Jobs",
+      "name": "Jobs",
       "members": [
         "Uncle Giant",
         "Grammy",
         "Chad",
         "J.D."
+      ]
+    },
+    {
+      "name": "No Jobs",
+      "members": [
+        "Captain",
+        "Cat",
+        "Lorelei"
       ]
     }
   ]

@@ -20,7 +20,7 @@
     {
       "name": "Cat's Game: Christmas Slots",
       "description": "Three people sit in a row, each with a bucket of different ornaments. A player will then pantamine pulling a slot machine lever, and the three people will all protend to be a slot. When the player says to stop, each slot pulls out an ornament, and based on when combo the ornaments are you get various points:",
-      "scoringTable": "<table border=\"1\" style=\"width: fit-content\">\n    <thead>\n      <tr>\n        <td colspan=\"3\" align=\"center\">Payouts</td>\n      </tr>\n    </thead>\n    <tbody>\n      <tr>\n        <td>3</td><td>gold pinecones</td><td class=\"number\">50</td>\n      </tr>\n      <tr>\n        <td>3</td><td>(any) gold ornaments</td><td class=\"number\">30</td>\n      </tr>\n      <tr>\n        <td>3</td><td>silver pinecones</td><td class=\"number\">25</td>\n      </tr>\n      <tr>\n        <td>3</td><td>(any) silver ornaments</td><td class=\"number\">15</td>\n      </tr>\n      <tr>\n        <td>1</td><td>of each color</td><td class=\"number\">10</td>\n      </tr>\n      <tr>\n        <td>2</td><td>exact smae ornaments</td><td>5</td>\n      </tr>\n    </tbody>\n  </table>\n<table border=\"1\" style=\"width: fit-content;\">\n    <thead>\n      <tr>\n        <td colspan=\"4\" align=\"center\">Team Underdogs</td>\n        <td colspan=\"4\" align=\"center\">Team Loser</td>\n      </tr>\n      <tr>\n        <td>Player</td>\n        <td>Score</td>\n        <td>Player</td>\n        <td>Score</td>\n        <td>Player</td>\n        <td>Score</td>\n        <td>Player</td>\n        <td>Score</td>\n      </tr>\n    </thead>\n    <tbody>\n      <tr>\n        <td rowspan=\"3\" style=\"vertical-align: top;\">1</td><td class=\"number\">0</td><td rowspan=\"3\" style=\"vertical-align: top;\">2</td><td class=\"number\">10</td>\n        <td rowspan=\"3\" style=\"vertical-align: top;\">1</td><td class=\"number\">10</td><td rowspan=\"3\" style=\"vertical-align: top;\">2</td><td class=\"number\">30</td>\n      </tr>\n      <tr>\n        <td class=\"number\">5</td><td class=\"number\">5</td>\n        <td class=\"number\">5</td><td class=\"number\">10</td>\n      </tr>\n      <tr>\n        <td class=\"number\">10</td><td class=\"number\">10</td>\n        <td class=\"number\">10</td><td class=\"number\">10</td>\n      </tr>\n      <tr>\n        <td>Total</td><td class=\"number\">15</td>\n        <td>Total</td><td class=\"number\">25</td>\n        <td>Total</td><td class=\"number\">25</td>\n        <td>Total</td><td class=\"number\">50</td>\n      </tr>\n      <tr>\n        <td rowspan=\"3\" style=\"vertical-align: top;\">3</td><td class=\"number\">20</td><td rowspan=\"3\" style=\"vertical-align: top;\">4</td><td class=\"number\">10</td>\n        <td rowspan=\"3\" style=\"vertical-align: top;\">3</td><td class=\"number\">10</td><td rowspan=\"3\" style=\"vertical-align: top;\">4</td><td class=\"number\">10</td>\n      </tr>\n      <tr>\n        <td class=\"number\">5</td><td class=\"number\">10</td>\n        <td class=\"number\">10</td><td class=\"number\">10</td>\n      </tr>\n      <tr>\n        <td class=\"number\">10</td><td class=\"number\">10</td>\n        <td class=\"number\">10</td><td class=\"number\">5</td>\n      </tr>\n      <tr>\n        <td>Total</td><td class=\"number\">25</td>\n        <td>Total</td><td class=\"number\">30</td>\n        <td>Total</td><td class=\"number\">25</td>\n        <td>Total</td><td class=\"number\">50</td>\n      </tr>\n    </tbody>\n  </table>"
+      "scoringTable": "### Payouts\n\n| Combination | Points |\n|-------------|--------|\n| 3 gold pinecones | 50 |\n| 3 (any) gold ornaments | 30 |\n| 3 silver pinecones | 25 |\n| 3 (any) silver ornaments | 15 |\n| 1 of each color | 10 |\n| 2 exact same ornaments | 5 |\n\n### Team Scores\n\n#### Team Underdogs\n\n| Player | Round 1 | Round 2 | Round 3 | Total |\n|--------|---------|---------|---------|-------|\n| 1 | 0 | 5 | 10 | 15 |\n| 2 | 10 | 5 | 10 | 25 |\n| 3 | 20 | 5 | 10 | 35 |\n| 4 | 10 | 10 | 10 | 30 |\n\n**Team Underdogs Total: 105**\n\n#### Team Loser\n\n| Player | Round 1 | Round 2 | Round 3 | Total |\n|--------|---------|---------|---------|-------|\n| 1 | 10 | 5 | 10 | 25 |\n| 2 | 30 | 10 | 10 | 50 |\n| 3 | 10 | 10 | 10 | 30 |\n| 4 | 10 | 10 | 5 | 25 |\n\n**Team Loser Total: 130**"
     },
     {
       "name": "Grammy's Game: Santa's Cup Reverse",
@@ -35,6 +35,15 @@
         "Cat",
         "Eddie",
         "Shep"
+      ]
+    },
+    {
+      "name": "Losers",
+      "members": [
+        "Uncle Giant",
+        "J.D.",
+        "Lorelei",
+        "Chad"
       ]
     }
   ]

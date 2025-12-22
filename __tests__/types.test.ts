@@ -25,7 +25,8 @@ describe('Type Guards', () => {
           {
             participant: 'J.D.',
             record: { wins: 12, losses: 7, winningPercentage: 0.632 },
-            standing: 1
+            standing: 1,
+            gamesPlayed: 19
           }
         ],
         lastUpdated: '2024-12-22'

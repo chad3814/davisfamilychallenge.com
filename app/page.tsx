@@ -1,14 +1,15 @@
 import Image from 'next/image';
 import Layout from '@/components/Layout';
 import Scoreboard from '@/components/Scoreboard';
-import StandingsTable from '@/components/StandingsTable';
 import YearSummaryCard from '@/components/YearSummaryCard';
-import { getScoreboardData, getYearData, getYearsList } from '@/lib/data';
+import { getScoreboardData, getYearData } from '@/lib/data';
 
 export default function HomePage() {
   const scoreboardData = getScoreboardData();
-  const years = getYearsList();
-  const yearsData = years.map(year => getYearData(year));
+
+  // Show only last 3 years on homepage
+  const recentYears = [2024, 2023, 2022];
+  const yearsData = recentYears.map(year => getYearData(year));
 
   return (
     <Layout>
@@ -32,14 +33,11 @@ export default function HomePage() {
         {/* Scoreboard */}
         <Scoreboard data={scoreboardData} />
 
-        {/* Standings */}
-        <StandingsTable data={scoreboardData} />
-
         {/* Year Summaries */}
         <div className="mt-12">
           <h2 className="text-3xl font-bold text-center mb-8">Yearly Results</h2>
           {yearsData.map((yearData) => (
-            <YearSummaryCard key={yearData.year} data={yearData} />
+            <YearSummaryCard key={yearData.year} data={yearData} hideGameDescriptions />
           ))}
         </div>
       </div>

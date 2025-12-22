@@ -10,20 +10,8 @@
       "description": "After the Captain failed the first hoop, everyone else on the Old Timers made it through the first, and Cat made it through the second. All of The Youngins save Jenelle failed the first hoop, but Jenelle pulled it out for her team by getting the second. Having faced a tie we decided Cat and Jenelle each would get two chances at the third hoop. When they both failed we called it a tie of 2-2."
     },
     {
-      "name": "Soccer Croquet",
-      "description": "After the Captain failed the first hoop, everyone else on the Old Timers made it through the first, and Cat made it through the second. All of The Youngins save Jenelle failed the first hoop, but Jenelle pulled it out for her team by getting the second. Having faced a tie we decided Cat and Jenelle each would get two chances at the third hoop. When they both failed we called it a tie of 2-2."
-    },
-    {
       "name": "Minute-To-Win-It Nut Stacker",
       "description": "Eddie started it out with a bang! He got his four nuts stacked super quick. Lorelei was able to knock it out as well. After the kids, everyone succeeded except for Jenelle and the Captain. The pressure was on as Uncle Giant and Cat came up to play. Uncle Giant had the advantage of playing it before, and Cat choked. 3-2 Youngins."
-    },
-    {
-      "name": "Minute-To-Win-It Nut Stacker",
-      "description": "Eddie started it out with a bang! He got his four nuts stacked super quick. Lorelei was able to knock it out as well. After the kids, everyone succeeded except for Jenelle and the Captain. The pressure was on as Uncle Giant and Cat came up to play. Uncle Giant had the advantage of playing it before, and Cat choked. 3-2 Youngins."
-    },
-    {
-      "name": "Minute-To-Win-It Candy Cane Grab",
-      "description": "Lorelei tried to show Eddie how to do it, but she failed. Eddie\nsucceeded with the Captain's help. Next Chad blew it out and Uncle\nGiant failed. The Captain followed Chad's lead and J.D. sealed The\nYoungins' fate with his loss. The Old Timers won with 4-2."
     },
     {
       "name": "Minute-To-Win-It Candy Cane Grab",
@@ -34,24 +22,8 @@
       "description": "The Old Timers were just too feeble."
     },
     {
-      "name": "Present Unwrap Race",
-      "description": "The Old Timers were just too feeble."
-    },
-    {
       "name": "Trivia",
       "description": "Out of the 24 questions written, 15 were answered correctly,\ngiving the Old Timers the win, 8-7, for the tie."
-    },
-    {
-      "name": "Trivia",
-      "description": "Out of the 24 questions written, 15 were answered correctly,\ngiving the Old Timers the win, 8-7, for the tie."
-    },
-    {
-      "name": "31",
-      "description": "Because the teams were tied we had to come up with a tie breaker:\n31. We decided that we would play sudden death 31, everyone would be\non their free ride. Cat knocked the first round and was beat (by Chad,\ndoh!), and Lorelei had lowest. The second round Jenelle knocked and\nwas beat and James had the lowest. That left the Captain, Grammy, Chad\nand Uncle Giant. Uncle Giant knocked with 23 and was beat, giving the\nW to the Old Timers."
-    },
-    {
-      "name": "31",
-      "description": "Because the teams were tied we had to come up with a tie breaker:\n31. We decided that we would play sudden death 31, everyone would be\non their free ride. Cat knocked the first round and was beat (by Chad,\ndoh!), and Lorelei had lowest. The second round Jenelle knocked and\nwas beat and James had the lowest. That left the Captain, Grammy, Chad\nand Uncle Giant. Uncle Giant knocked with 23 and was beat, giving the\nW to the Old Timers."
     }
   ],
   "teams": [
@@ -62,6 +34,16 @@
         "Grammy",
         "Cat",
         "Chad"
+      ]
+    },
+    {
+      "name": "Youngins",
+      "members": [
+        "Uncle Giant",
+        "J.D.",
+        "Jenelle",
+        "Lorelei",
+        "Eddie (Honory)"
       ]
     }
   ]

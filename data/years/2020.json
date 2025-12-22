@@ -11,7 +11,11 @@
     },
     {
       "name": "Eddie's Game: Sip-Sip-Suck",
-      "description": "A game from TikTok, each player took turns holding a solo cup with a straw under a running faucet. The player had to continually drink the water through the straw, until thee cup overflowed. The players were timed, and all the team's player's times were added together, the team that lasted the longest won. Chad once again went first, and set a baseline of 23.9 seconds. Eddie, who is physically smaller than the rest, lasted only 16.7s. Captain show his camel-like instincts and it took 25.3s for the water to overflow. Lorelei continued the trend of each teams' players going longer, she lasted 20.8s. Cat scored the Parent team record of 26.2s, but J.D. fired back with 29.2! Grammy, just assumed the Parents had it in the sewn up, she sandbagged 23.1s. Uncle Giant went last, and wanted to know how long he needed to last for the Non-Parents to pull out a win. Chad quickly estimated, \"I'm sure you'll win if you make it to 40 seconds,\" thinking that that was an absurd amount of time. Uncle Giant put in a massive effort for the Non-Parents and maintained a spill-free cup for 49 seconds! That did give the victory to the Non-Parents, who were now up 2-0. In this game, one from each team try pulling a solo cup (which is about 1/3rd full of water) down the length of the table. The cup is on the end of a roll of toilet paper. The teams compete head-to-head, scoring a team point for the person that gets their cup to the end first. After a quick demonstration,"
+      "description": "A game from TikTok, each player took turns holding a solo cup with a straw under a running faucet. The player had to continually drink the water through the straw, until thee cup overflowed. The players were timed, and all the team's player's times were added together, the team that lasted the longest won. Chad once again went first, and set a baseline of 23.9 seconds. Eddie, who is physically smaller than the rest, lasted only 16.7s. Captain show his camel-like instincts and it took 25.3s for the water to overflow. Lorelei continued the trend of each teams' players going longer, she lasted 20.8s. Cat scored the Parent team record of 26.2s, but J.D. fired back with 29.2! Grammy, just assumed the Parents had it in the sewn up, she sandbagged 23.1s. Uncle Giant went last, and wanted to know how long he needed to last for the Non-Parents to pull out a win. Chad quickly estimated, \"I'm sure you'll win if you make it to 40 seconds,\" thinking that that was an absurd amount of time. Uncle Giant put in a massive effort for the Non-Parents and maintained a spill-free cup for 49 seconds! That did give the victory to the Non-Parents, who were now up 2-0."
+    },
+    {
+      "name": "Uncle Giant's Game: TP Roll-Up",
+      "description": "In this game, one from each team try pulling a solo cup (which is about 1/3rd full of water) down the length of the table. The cup is on the end of a roll of toilet paper. The teams compete head-to-head, scoring a team point for the person that gets their cup to the end first. After a quick demonstration,"
     },
     {
       "name": "Chad's Game: Everybody Knows",
@@ -24,12 +28,21 @@
   ],
   "teams": [
     {
-      "name": "Non-Parents",
+      "name": "Parents",
       "members": [
         "Cat",
         "Chad",
         "Captain",
         "Grammy"
+      ]
+    },
+    {
+      "name": "Non-Parents",
+      "members": [
+        "J.D.",
+        "Uncle Giant",
+        "Lorelei",
+        "Eddie"
       ]
     }
   ]

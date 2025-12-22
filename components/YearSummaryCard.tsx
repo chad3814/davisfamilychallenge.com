@@ -3,13 +3,14 @@ import { YearData } from '@/types';
 
 interface YearSummaryCardProps {
   data: YearData;
+  hideGameDescriptions?: boolean;
 }
 
-export default function YearSummaryCard({ data }: YearSummaryCardProps) {
+export default function YearSummaryCard({ data, hideGameDescriptions = false }: YearSummaryCardProps) {
   return (
-    <div className="border border-gray-300 rounded-lg p-6 mb-8 bg-white shadow-sm">
+    <div className="border border-blue-500 rounded-lg p-6 mb-8 bg-white shadow-sm">
       <h3 className="text-2xl font-bold mb-4 text-center">
-        <Link href={`/${data.year}/`} className="text-blue-600 hover:underline">
+        <Link href={`/${data.year}/`} className="text-blue-600 hover:text-blue-800 hover:underline">
           {data.year}
         </Link>
       </h3>
@@ -42,9 +43,9 @@ export default function YearSummaryCard({ data }: YearSummaryCardProps) {
         <div className="overflow-x-auto">
           <table className="w-full border-collapse border border-gray-300 text-sm">
             <thead>
-              <tr className="bg-gray-100">
+              <tr className="bg-blue-100">
                 {data.teams.map((team, index) => (
-                  <th key={index} className="border border-gray-300 px-3 py-2">
+                  <th key={index} className="border border-gray-300 px-3 py-2 text-black font-semibold w-1/2">
                     {team.name}
                   </th>
                 ))}
@@ -53,7 +54,7 @@ export default function YearSummaryCard({ data }: YearSummaryCardProps) {
             <tbody>
               <tr>
                 {data.teams.map((team, index) => (
-                  <td key={index} className="border border-gray-300 px-3 py-2 align-top">
+                  <td key={index} className="border border-gray-300 px-3 py-2 align-top w-1/2">
                     <ul className="list-none">
                       {team.members.map((member, memberIndex) => (
                         <li key={memberIndex}>{member}</li>
