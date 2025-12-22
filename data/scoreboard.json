@@ -1,0 +1,86 @@
+{
+  "entries": [
+    {
+      "participant": "J.D.",
+      "record": {
+        "wins": 12,
+        "losses": 7,
+        "winningPercentage": 0.632
+      },
+      "standing": 1
+    },
+    {
+      "participant": "Chad",
+      "record": {
+        "wins": 12,
+        "losses": 7,
+        "winningPercentage": 0.632
+      },
+      "standing": 1
+    },
+    {
+      "participant": "Captain",
+      "record": {
+        "wins": 9,
+        "losses": 6,
+        "winningPercentage": 0.6
+      },
+      "standing": 3
+    },
+    {
+      "participant": "Cat",
+      "record": {
+        "wins": 10,
+        "losses": 9,
+        "winningPercentage": 0.526
+      },
+      "standing": 4
+    },
+    {
+      "participant": "Uncle Giant",
+      "record": {
+        "wins": 10,
+        "losses": 9,
+        "winningPercentage": 0.526
+      },
+      "standing": 4
+    },
+    {
+      "participant": "Lorelei",
+      "record": {
+        "wins": 10,
+        "losses": 9,
+        "winningPercentage": 0.526
+      },
+      "standing": 4
+    },
+    {
+      "participant": "Grammy",
+      "record": {
+        "wins": 7,
+        "losses": 12,
+        "winningPercentage": 0.368
+      },
+      "standing": 7
+    },
+    {
+      "participant": "Eddie",
+      "record": {
+        "wins": 4,
+        "losses": 8,
+        "winningPercentage": 0.333
+      },
+      "standing": 8
+    },
+    {
+      "participant": "Shep",
+      "record": {
+        "wins": 0,
+        "losses": 1,
+        "winningPercentage": 0.0
+      },
+      "standing": 9
+    }
+  ],
+  "lastUpdated": "2024-12-22"
+}

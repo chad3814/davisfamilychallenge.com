@@ -1,0 +1,28 @@
+{
+  "year": 2008,
+  "ordinalName": "Third Annual Davis Family Challenge",
+  "teamScheme": "Captains",
+  "challengeTheme": "Golf",
+  "winners": "Captain's Team",
+  "games": [],
+  "teams": [
+    {
+      "name": "Lorelei's Team",
+      "members": [
+        "Lorelei",
+        "Grammy",
+        "Uncle Giant",
+        "Jenelle"
+      ]
+    },
+    {
+      "name": "Captain's Team",
+      "members": [
+        "Captain",
+        "J.D.",
+        "Cat",
+        "Chad"
+      ]
+    }
+  ]
+}

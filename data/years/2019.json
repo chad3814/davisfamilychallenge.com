@@ -1,0 +1,69 @@
+{
+  "year": 2019,
+  "ordinalName": "Fourteenth Annual Davis Family Challenge",
+  "teamScheme": "Tie breaking team captains",
+  "challengeTheme": "Picked from a container",
+  "winners": "Turkey Catchers",
+  "games": [
+    {
+      "name": "s Game - Pencil Flip",
+      "description": "J.D. left his game at the checkout counter at WalMart, so he designated Eddie for a substitute game. Four solo cups and eight pencils were setup for each team. Everybody attempts to bounce the two pencils (one at a time) into their assigned cup, similar to"
+    },
+    {
+      "name": "s Game - Pencil Flip",
+      "description": "J.D. left his game at the checkout counter at WalMart, so he designated Eddie for a substitute game. Four solo cups and eight pencils were setup for each team. Everybody attempts to bounce the two pencils (one at a time) into their assigned cup, similar to"
+    },
+    {
+      "name": "s Game - I Spy Christmas Tree",
+      "description": ""
+    },
+    {
+      "name": "s Game - I Spy Christmas Tree",
+      "description": ""
+    },
+    {
+      "name": "s Game - Flip Tac Toe",
+      "description": "In this game, one from each team try flipping solo cups to get them to land upside down. When that happens, the player gets to place it on a tic-tac-toe board. First player to get a tic-tac-toe wins. The Turkey Tossers got off to a good start with Chad beating Eddie and Lorelei beating J.D. Captain thrawted Uncle Giant once, but it wasn't enough and the Turley Catchers got a game. Grammy pulled a magnificent win against Cat! Turkey Tossers get on the board."
+    },
+    {
+      "name": "s Game - Flip Tac Toe",
+      "description": "In this game, one from each team try flipping solo cups to get them to land upside down. When that happens, the player gets to place it on a tic-tac-toe board. First player to get a tic-tac-toe wins. The Turkey Tossers got off to a good start with Chad beating Eddie and Lorelei beating J.D. Captain thrawted Uncle Giant once, but it wasn't enough and the Turley Catchers got a game. Grammy pulled a magnificent win against Cat! Turkey Tossers get on the board."
+    },
+    {
+      "name": "s Game - Reindeer Games",
+      "description": ""
+    },
+    {
+      "name": "s Game - Reindeer Games",
+      "description": ""
+    },
+    {
+      "name": "s Game - Chow Crown",
+      "description": "Not played."
+    },
+    {
+      "name": "s Game - Chow Crown",
+      "description": "Not played."
+    }
+  ],
+  "teams": [
+    {
+      "name": "Turkey Catchers",
+      "members": [
+        "Cat",
+        "J.D.",
+        "Uncle Giant",
+        "Lorelei"
+      ]
+    },
+    {
+      "name": "Turkey Tossers",
+      "members": [
+        "Grammy",
+        "Chad",
+        "Captain",
+        "Eddie"
+      ]
+    }
+  ]
+}

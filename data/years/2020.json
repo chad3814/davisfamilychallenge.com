@@ -1,0 +1,36 @@
+{
+  "year": 2020,
+  "ordinalName": "Fifteenth Annual Davis Family Challenge",
+  "teamScheme": "Parents/Non-Parents",
+  "challengeTheme": "Picked from a container",
+  "winners": "Parents",
+  "games": [
+    {
+      "name": "Grammy's Game: I Spy Christmas Tree",
+      "description": "The perennial favorite. Grammy has taken close-up pictures of all the ornaments before placing them on a Christmas tree. The Tree is in a revolving stand, and it takes a little less than two minutes for the tree to make a complete revolution. There is a taped off area where players stand and look at the tree, trying to find the random ornament they were given. A maximum of two minutes are allowed per ornament. Since Grammy knew where all the ornaments are, she didn't play, leaving the Parents team with three people and the Non-Parents team with four. So each player on the Parents team went four times and each on the Non-Parents team went three times. The 12 times for each team were summed and the quickest time won. Chad started it out with a thud for the Parents by not finding the first ornament, 120 seconds. Eddie went first for the Non-Parents and quickly showed up his dad by finding the ornament in 4.2s. Cat vowed to turn the Parents team around and found her first ornament in 16.3s, but Uncle Giant answered back with 10.3s. Captain presented a stoic glare at the tree, and found his ornament in 33.3s. Even Lorelei's 69.0s score couldn't drag down the Non-Parent team. Chad, looking for redemption after being shut-out the first time, struggled again, but eventually found it in 76.4s. J.D. finished Non-Parents first round with solid 5.4s. Unfortunately, Cat couldn't find her second ornament, scoring 120s. Eddie, struggled and also couldn't find his second ornament, 120s. Captain, realizing that the Parents were heading for a loss in the first game, tried to delay with ideas of how to improve the game next year, in the end he was forced to play and found his second ornament in 105.7s. Uncle Giant got an easy pick, a santa baseball, and found it in 8.3s. Starting the Parents third round, Chad was super nervous, but hadn't yet given up; maybe he should've, he found the ornament from the first round, but failed to find the correct one this time, another 120s. Despite cheating by putting her phone across the line, Lorelei failed to find her second ornament for the Non-Parents team, 120s. Cat, meanwhile, was ready for a fight! She was fired up and found her ornament in a Parents team record of 6.7s. J.D. was cocky, yet it took him over a minute to find his, 63.3s. Buoyed by Cat's quick performance and J.D.'s relatively slow one, Captain remarked that we might as well mark him down as 10s, alas, he didn't find it, 120s. Everyone had noticed an all-black figurine near the bottom, and Eddie hoped to get it, thinking it was a ninja; he didn't get it, but found his in 24.8s. Starting the Parent's last round, Chad got a PR with 26.0s, however, Uncle Giant was then given an easy candy cane and scored 13.5s. Cat, still full of confidence from the last round, strode up to the tree and found the ornament in 17s even. Lorelei was excited to be looking for a bird ornament and found it easily, 10.4s. The Captain, already figuring out the Parents Team's fate was far less cocky, he found a moon ornament in under half a minute, 29.8s. The last player of the game, J.D., found it in 31.5s. In total, the Parents took 791.2 seconds to find their ornaments, while the Non-Parents took only 480.7 seconds. Non-Parents Win!"
+    },
+    {
+      "name": "Eddie's Game: Sip-Sip-Suck",
+      "description": "A game from TikTok, each player took turns holding a solo cup with a straw under a running faucet. The player had to continually drink the water through the straw, until thee cup overflowed. The players were timed, and all the team's player's times were added together, the team that lasted the longest won. Chad once again went first, and set a baseline of 23.9 seconds. Eddie, who is physically smaller than the rest, lasted only 16.7s. Captain show his camel-like instincts and it took 25.3s for the water to overflow. Lorelei continued the trend of each teams' players going longer, she lasted 20.8s. Cat scored the Parent team record of 26.2s, but J.D. fired back with 29.2! Grammy, just assumed the Parents had it in the sewn up, she sandbagged 23.1s. Uncle Giant went last, and wanted to know how long he needed to last for the Non-Parents to pull out a win. Chad quickly estimated, \"I'm sure you'll win if you make it to 40 seconds,\" thinking that that was an absurd amount of time. Uncle Giant put in a massive effort for the Non-Parents and maintained a spill-free cup for 49 seconds! That did give the victory to the Non-Parents, who were now up 2-0. In this game, one from each team try pulling a solo cup (which is about 1/3rd full of water) down the length of the table. The cup is on the end of a roll of toilet paper. The teams compete head-to-head, scoring a team point for the person that gets their cup to the end first. After a quick demonstration,"
+    },
+    {
+      "name": "Chad's Game: Everybody Knows",
+      "description": "Using the trivia question cards from the game Everybody Knows, each player is read and answers as many questions as possible in two minutes. The reader is someone from their team, and the total number of correctly answered questions is the score."
+    },
+    {
+      "name": "Lorelei's Game: Egg Smash",
+      "description": "Another game from TikTok. There's an egg under a clear plastic tupperware container. One player from each team stands on either side a table with the egg in the middle, and take turns smacking the container or grabbing the container. The first player to break the egg loses. The team with the least broken eggs wins."
+    }
+  ],
+  "teams": [
+    {
+      "name": "Non-Parents",
+      "members": [
+        "Cat",
+        "Chad",
+        "Captain",
+        "Grammy"
+      ]
+    }
+  ]
+}

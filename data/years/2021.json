@@ -1,0 +1,48 @@
+{
+  "year": 2021,
+  "ordinalName": "Sixteenth Annual Davis Family Challenge",
+  "teamScheme": "Drew cards",
+  "challengeTheme": "Picked from a container",
+  "winners": "Red Cards",
+  "games": [
+    {
+      "name": "Lorelei's Game: On the Dot",
+      "description": "This game involves placing transparent cards with dots on them on top of solid cards with the same dots. People had to match the dots in the positions on the cards. Each team elected two players and each were given five solid cards to match. J.D. smashed it finishing first, then Chad finished. J.D. and Chad then helped Uncle Giant and Cat, with the Red Cards pulling it out."
+    },
+    {
+      "name": "Chad's Game: Cribbage",
+      "description": "J.D. and Lorelei played for the red team and Grammy and Eddie played for the black team. There were big leads by both teams, but near the end it came down to counting. The black team threw down a pair-royal (three of a kind) for 6 points to win the game exactly at 121, beating the red team by 6."
+    },
+    {
+      "name": "J.D.'s Game: Puzzles",
+      "description": "J.D. had two of the same 100-piece puzzle of a dinosaur, and three people from each team raced to put them together. Grammy sat out and let the black team down. The red team smoked the black team."
+    },
+    {
+      "name": "Cat's Game: Marshmellow Mayhem",
+      "description": "Everyone took turns being blindfolded and trying to scoop marshellmellows into a bowl with a spatula. Eddie started it out with a baseline of 15 marshmellows in the bowl. Cat came back with 21. Uncle Giant set a black team record with 25! J.D. then showed everyone how it was done with 39! There was no way Chad could compete with the same strategy so he tried just going as fast as possible, which resulted in the marshmellows going everywhere, he ended up with 16. Lorelei claimed she'd do <b>waaaaay</b> better than Chad, but 17 isn't that much better. Grammy finished strong for the black with uhh 7. Black team averaged 15.75. Red team averaged 25.67 for the win."
+    },
+    {
+      "name": "Uncle Giant's Game: Roly Poly",
+      "description": "For fun we played Uncle Giants's game. A play field was setup at the end of the dining table with sheets of paper with points on them. Everyone took turns rolling a can of pop down the table, scoring the number of points the can stopped on. If it was on more than one sheet whichever was lowest scored. Each person rolled five times, and their totals were:<br/>\n    <a href=\"roly-poly-lg.jpg\"><img src=\"roly-poly.jpg\" alt=\"play field\"/></a><br/>\n    Grammy: -3<br/>\n    Lorelei: 1<br/>\n    Eddie: 1<br/>\n    Cat: 5<br/>\n    Chad: 5<br/>\n    J.D.: 2<br/>\n    Uncle Giant: 5<br/>"
+    }
+  ],
+  "teams": [
+    {
+      "name": "Black Cards",
+      "members": [
+        "Chad",
+        "Grammy",
+        "Uncle Giant",
+        "Eddie"
+      ]
+    },
+    {
+      "name": "Red Cards",
+      "members": [
+        "J.D.",
+        "Cat",
+        "Lorelei"
+      ]
+    }
+  ]
+}
