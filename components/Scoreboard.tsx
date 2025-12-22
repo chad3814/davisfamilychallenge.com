@@ -1,11 +1,15 @@
 import { ScoreboardData } from '@/types';
-import { formatRecord, calculateGamesPlayed } from '@/lib/utils';
+import { formatRecord, calculateGamesPlayed, calculateStandings } from '@/lib/utils';
 
 interface ScoreboardProps {
   data: ScoreboardData;
 }
 
 export default function Scoreboard({ data }: ScoreboardProps) {
+  // Filter visible entries and calculate standings
+  const visibleEntries = data.entries.filter(entry => entry.show !== false);
+  const entriesWithStandings = calculateStandings(visibleEntries);
+
   return (
     <div className="mb-12">
       <h2 className="text-2xl font-bold text-center mb-6">Lifetime Records</h2>
@@ -15,6 +19,7 @@ export default function Scoreboard({ data }: ScoreboardProps) {
         <table className="w-full border-collapse border border-gray-300">
           <thead>
             <tr className="bg-blue-100">
+              <th className="border border-gray-300 px-4 py-2 text-center text-black font-semibold">Standing</th>
               <th className="border border-gray-300 px-4 py-2 text-left text-black font-semibold">Name</th>
               <th className="border border-gray-300 px-4 py-2 text-center text-black font-semibold">Record</th>
               <th className="border border-gray-300 px-4 py-2 text-center text-black font-semibold">Winning Percentage</th>
@@ -22,10 +27,13 @@ export default function Scoreboard({ data }: ScoreboardProps) {
             </tr>
           </thead>
           <tbody>
-            {data.entries.map((entry) => {
+            {entriesWithStandings.map((entry) => {
               const gamesPlayed = calculateGamesPlayed(entry.record.wins, entry.record.losses);
               return (
                 <tr key={entry.participant} className="hover:bg-blue-50">
+                  <td className="border border-gray-300 px-4 py-2 text-center font-semibold">
+                    {entry.standing}
+                  </td>
                   <td className="border border-gray-300 px-4 py-2 font-semibold">
                     {entry.participant}
                   </td>
@@ -47,7 +55,7 @@ export default function Scoreboard({ data }: ScoreboardProps) {
 
       {/* Mobile Cards */}
       <div className="md:hidden space-y-4">
-        {data.entries.map((entry) => {
+        {entriesWithStandings.map((entry) => {
           const gamesPlayed = calculateGamesPlayed(entry.record.wins, entry.record.losses);
           return (
             <div

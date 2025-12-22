@@ -1,4 +1,4 @@
-import { isYearData, isScoreboardData, isParticipantRecord, type YearData, type ScoreboardData, type ParticipantRecord } from '@/types';
+import { isYearData, isScoreboardData, isParticipantRecord, type YearData, type ScoreboardData, type ParticipantRecord, type ScoreboardEntry } from '@/types';
 
 describe('Type Guards', () => {
   describe('isParticipantRecord', () => {
@@ -25,8 +25,7 @@ describe('Type Guards', () => {
           {
             participant: 'J.D.',
             record: { wins: 12, losses: 7, winningPercentage: 0.632 },
-            standing: 1,
-            gamesPlayed: 19
+            standing: 1
           }
         ],
         lastUpdated: '2024-12-22'
@@ -57,6 +56,127 @@ describe('Type Guards', () => {
     it('should reject invalid year data', () => {
       expect(isYearData({ year: '2024' })).toBe(false);
       expect(isYearData(null)).toBe(false);
+    });
+  });
+});
+
+describe('Hidden Participants Feature - Type Definitions', () => {
+  describe('ScoreboardEntry with optional show field', () => {
+    it('should accept entry with show: true', () => {
+      const entry: ScoreboardEntry = {
+        participant: 'J.D.',
+        record: { wins: 12, losses: 7, winningPercentage: 0.632 },
+        standing: 1,
+        show: true
+      };
+      expect(entry.show).toBe(true);
+    });
+
+    it('should accept entry with show: false', () => {
+      const entry: ScoreboardEntry = {
+        participant: 'Shep',
+        record: { wins: 0, losses: 1, winningPercentage: 0.0 },
+        standing: 9,
+        show: false
+      };
+      expect(entry.show).toBe(false);
+    });
+
+    it('should accept entry without show field (backward compatibility)', () => {
+      const entry: ScoreboardEntry = {
+        participant: 'Chad',
+        record: { wins: 12, losses: 7, winningPercentage: 0.632 },
+        standing: 1
+      };
+      expect(entry.show).toBeUndefined();
+    });
+  });
+
+  describe('isScoreboardData type guard with optional show field', () => {
+    it('should accept data with entries having show: false', () => {
+      const data = {
+        entries: [
+          {
+            participant: 'Shep',
+            record: { wins: 0, losses: 1, winningPercentage: 0.0 },
+            show: false
+          }
+        ],
+        lastUpdated: '2024-12-22'
+      };
+      expect(isScoreboardData(data)).toBe(true);
+    });
+
+    it('should accept data with entries having show: true', () => {
+      const data = {
+        entries: [
+          {
+            participant: 'J.D.',
+            record: { wins: 12, losses: 7, winningPercentage: 0.632 },
+            show: true
+          }
+        ],
+        lastUpdated: '2024-12-22'
+      };
+      expect(isScoreboardData(data)).toBe(true);
+    });
+
+    it('should accept data with entries without show field (backward compatibility)', () => {
+      const data = {
+        entries: [
+          {
+            participant: 'Chad',
+            record: { wins: 12, losses: 7, winningPercentage: 0.632 }
+          }
+        ],
+        lastUpdated: '2024-12-22'
+      };
+      expect(isScoreboardData(data)).toBe(true);
+    });
+
+    it('should accept data without standing field in entries', () => {
+      const data = {
+        entries: [
+          {
+            participant: 'Captain',
+            record: { wins: 9, losses: 6, winningPercentage: 0.6 }
+          }
+        ],
+        lastUpdated: '2024-12-22'
+      };
+      expect(isScoreboardData(data)).toBe(true);
+    });
+
+    it('should reject data with non-boolean show field', () => {
+      const data = {
+        entries: [
+          {
+            participant: 'J.D.',
+            record: { wins: 12, losses: 7, winningPercentage: 0.632 },
+            show: 'yes' // Invalid: should be boolean
+          }
+        ],
+        lastUpdated: '2024-12-22'
+      };
+      expect(isScoreboardData(data)).toBe(false);
+    });
+
+    it('should accept mixed entries (some with show, some without)', () => {
+      const data = {
+        entries: [
+          {
+            participant: 'J.D.',
+            record: { wins: 12, losses: 7, winningPercentage: 0.632 }
+          },
+          {
+            participant: 'Shep',
+            record: { wins: 0, losses: 1, winningPercentage: 0.0 },
+            show: false
+          }
+        ],
+        lastUpdated: '2024-12-22'
+      };
+      expect(isScoreboardData(data)).toBe(true);
     });
   });
 });

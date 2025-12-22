@@ -14,7 +14,7 @@ export interface ScoreboardEntry {
   participant: string;
   record: ParticipantRecord;
   standing: number;
-  gamesPlayed: number;
+  show?: boolean;
 }
 
 export interface ScoreboardData {
@@ -108,13 +108,19 @@ export function isScoreboardData(data: unknown): data is ScoreboardData {
   return (
     Array.isArray(obj.entries) &&
     typeof obj.lastUpdated === 'string' &&
-    obj.entries.every(entry =>
-      typeof entry === 'object' &&
-      entry !== null &&
-      'participant' in entry &&
-      'record' in entry &&
-      'standing' in entry
-    )
+    obj.entries.every(entry => {
+      if (typeof entry !== 'object' || entry === null) return false;
+
+      const e = entry as globalThis.Record<string, unknown>;
+
+      // Validate required fields
+      if (!('participant' in e && 'record' in e)) return false;
+
+      // Validate optional show field (if present, must be boolean)
+      if ('show' in e && typeof e.show !== 'boolean') return false;
+
+      return true;
+    })
   );
 }
 

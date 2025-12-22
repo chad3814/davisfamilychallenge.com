@@ -12,14 +12,12 @@ describe('Integration Workflows', () => {
       {
         participant: 'J.D.',
         record: { wins: 12, losses: 7, winningPercentage: 0.632 },
-        standing: 1,
-        gamesPlayed: 19
+        standing: 1
       },
       {
         participant: 'Chad',
         record: { wins: 12, losses: 7, winningPercentage: 0.632 },
-        standing: 1,
-        gamesPlayed: 19
+        standing: 1
       }
     ],
     lastUpdated: '2024-12-22'

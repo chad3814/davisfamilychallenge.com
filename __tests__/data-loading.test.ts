@@ -21,7 +21,6 @@ describe('Data Loading Functions', () => {
         expect(entry.record.losses).toBeGreaterThanOrEqual(0);
         expect(entry.record.winningPercentage).toBeGreaterThanOrEqual(0);
         expect(entry.record.winningPercentage).toBeLessThanOrEqual(1);
-        expect(entry.standing).toBeGreaterThan(0);
       });
     });
   });
@@ -82,6 +81,61 @@ describe('Data Loading Functions', () => {
       }
       expect(years[0]).toBe(2024);
       expect(years[years.length - 1]).toBe(2006);
+    });
+  });
+});
+
+describe('Hidden Participants Feature - Data Structure', () => {
+  describe('Scoreboard JSON data structure', () => {
+    it('should have 13 total entries', () => {
+      const data = getScoreboardData();
+      expect(data.entries.length).toBe(13);
+    });
+
+    it('should have 5 hidden participants with show: false', () => {
+      const data = getScoreboardData();
+      const hiddenEntries = data.entries.filter(entry => entry.show === false);
+      expect(hiddenEntries.length).toBe(5);
+
+      const hiddenNames = hiddenEntries.map(e => e.participant).sort();
+      expect(hiddenNames).toEqual(['Jenelle', 'Katie', 'Meredith', 'Shep', 'Steph']);
+    });
+
+    it('should have 8 visible participants', () => {
+      const data = getScoreboardData();
+      const visibleEntries = data.entries.filter(entry => entry.show !== false);
+      expect(visibleEntries.length).toBe(8);
+
+      const visibleNames = visibleEntries.map(e => e.participant).sort();
+      expect(visibleNames).toEqual(['Captain', 'Cat', 'Chad', 'Eddie', 'Grammy', 'J.D.', 'Lorelei', 'Uncle Giant']);
+    });
+
+    it('should have no standing field in any entry', () => {
+      const data = getScoreboardData();
+      data.entries.forEach(entry => {
+        expect(entry.standing).toBeUndefined();
+      });
+    });
+
+    it('should have correct winning percentages for new participants', () => {
+      const data = getScoreboardData();
+
+      const steph = data.entries.find(e => e.participant === 'Steph');
+      expect(steph?.record.winningPercentage).toBe(0.333);
+
+      const katie = data.entries.find(e => e.participant === 'Katie');
+      expect(katie?.record.winningPercentage).toBe(0.0);
+
+      const jenelle = data.entries.find(e => e.participant === 'Jenelle');
+      expect(jenelle?.record.winningPercentage).toBe(0.0);
+
+      const meredith = data.entries.find(e => e.participant === 'Meredith');
+      expect(meredith?.record.winningPercentage).toBe(0.0);
+    });
+
+    it('should not have updated lastUpdated date', () => {
+      const data = getScoreboardData();
+      expect(data.lastUpdated).toBe('2024-12-22');
     });
   });
 });

@@ -25,14 +25,12 @@ describe('Responsive Behavior', () => {
       {
         participant: 'J.D.',
         record: { wins: 12, losses: 7, winningPercentage: 0.632 },
-        standing: 1,
-        gamesPlayed: 19
+        standing: 1
       },
       {
         participant: 'Cat',
         record: { wins: 10, losses: 9, winningPercentage: 0.526 },
-        standing: 2,
-        gamesPlayed: 19
+        standing: 2
       }
     ],
     lastUpdated: '2024-12-22'
