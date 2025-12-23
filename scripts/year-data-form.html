@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Davis Family Challenge - Year Data Entry</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .section-header {
+            @apply text-2xl font-bold text-blue-700 mb-4 mt-8 pb-2 border-b-2 border-blue-200;
+        }
+        .field-label {
+            @apply block text-sm font-semibold text-gray-700 mb-1;
+        }
+        .text-input {
+            @apply w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500;
+        }
+        .textarea-input {
+            @apply w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 min-h-[100px];
+        }
+        .btn-primary {
+            @apply bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-md transition-colors;
+        }
+        .btn-secondary {
+            @apply bg-gray-600 hover:bg-gray-700 text-white font-semibold py-2 px-4 rounded-md transition-colors;
+        }
+        .btn-danger {
+            @apply bg-red-600 hover:bg-red-700 text-white font-semibold py-2 px-4 rounded-md transition-colors;
+        }
+        .btn-success {
+            @apply bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-md transition-colors;
+        }
+        .card {
+            @apply bg-white border border-gray-200 rounded-lg p-4 mb-4 shadow-sm;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div class="max-w-5xl mx-auto p-6">
+        <header class="mb-8">
+            <h1 class="text-4xl font-bold text-blue-800 mb-2">Davis Family Challenge</h1>
+            <h2 class="text-xl text-gray-600">Year Data Entry Form</h2>
+            <p class="text-sm text-gray-500 mt-2">Fill out this form to generate the JSON file for a new year</p>
+        </header>
+
+        <form id="yearDataForm" class="bg-white rounded-lg shadow-md p-6">
+            <!-- Basic Information -->
+            <div class="section-header">Basic Information</div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                <div>
+                    <label class="field-label">Year *</label>
+                    <input type="number" id="year" required class="text-input" placeholder="2025" min="2006" max="2099">
+                </div>
+                <div>
+                    <label class="field-label">Ordinal Name *</label>
+                    <input type="text" id="ordinalName" required class="text-input" placeholder="19th Annual">
+                    <p class="text-xs text-gray-500 mt-1">e.g., "19th Annual"</p>
+                </div>
+            </div>
+
+            <div class="mb-4">
+                <label class="field-label">Team Scheme *</label>
+                <input type="text" id="teamScheme" required class="text-input" placeholder="Random Draw">
+                <p class="text-xs text-gray-500 mt-1">How were teams formed? (e.g., "Random Draw", "Captain's Pick")</p>
+            </div>
+
+            <div class="mb-4">
+                <label class="field-label">Challenge Theme *</label>
+                <input type="text" id="challengeTheme" required class="text-input" placeholder="Summer Olympics">
+                <p class="text-xs text-gray-500 mt-1">Overall theme of the competition</p>
+            </div>
+
+            <!-- Team Assignment Section -->
+            <div class="section-header">Team Assignments</div>
+            <p class="text-sm text-gray-600 mb-4">
+                Assign each regular participant to Team 1 or Team 2
+                <span class="text-blue-600 font-semibold">(Teams are randomized on page load - you can re-randomize anytime!)</span>
+            </p>
+
+            <div class="card mb-6">
+                <div class="space-y-3">
+                    <div class="flex items-center justify-between py-2 border-b border-gray-200">
+                        <span class="font-medium text-gray-700 w-40">Cat</span>
+                        <div class="flex gap-4">
+                            <label class="flex items-center cursor-pointer">
+                                <input type="radio" name="assign-Cat" value="1" class="mr-2">
+                                <span>Team 1</span>
+                            </label>
+                            <label class="flex items-center cursor-pointer">
+                                <input type="radio" name="assign-Cat" value="2" class="mr-2">
+                                <span>Team 2</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between py-2 border-b border-gray-200">
+                        <span class="font-medium text-gray-700 w-40">Chad</span>
+                        <div class="flex gap-4">
+                            <label class="flex items-center cursor-pointer">
+                                <input type="radio" name="assign-Chad" value="1" class="mr-2">
+                                <span>Team 1</span>
+                            </label>
+                            <label class="flex items-center cursor-pointer">
+                                <input type="radio" name="assign-Chad" value="2" class="mr-2">
+                                <span>Team 2</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between py-2 border-b border-gray-200">
+                        <span class="font-medium text-gray-700 w-40">Eddie</span>
+                        <div class="flex gap-4">
+                            <label class="flex items-center cursor-pointer">
+                                <input type="radio" name="assign-Eddie" value="1" class="mr-2">
+                                <span>Team 1</span>
+                            </label>
+                            <label class="flex items-center cursor-pointer">
+                                <input type="radio" name="assign-Eddie" value="2" class="mr-2">
+                                <span>Team 2</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between py-2 border-b border-gray-200">
+                        <span class="font-medium text-gray-700 w-40">Grammy</span>
+                        <div class="flex gap-4">
+                            <label class="flex items-center cursor-pointer">
+                                <input type="radio" name="assign-Grammy" value="1" class="mr-2">
+                                <span>Team 1</span>
+                            </label>
+                            <label class="flex items-center cursor-pointer">
+                                <input type="radio" name="assign-Grammy" value="2" class="mr-2">
+                                <span>Team 2</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between py-2 border-b border-gray-200">
+                        <span class="font-medium text-gray-700 w-40">J.D.</span>
+                        <div class="flex gap-4">
+                            <label class="flex items-center cursor-pointer">
+                                <input type="radio" name="assign-J.D." value="1" class="mr-2">
+                                <span>Team 1</span>
+                            </label>
+                            <label class="flex items-center cursor-pointer">
+                                <input type="radio" name="assign-J.D." value="2" class="mr-2">
+                                <span>Team 2</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between py-2 border-b border-gray-200">
+                        <span class="font-medium text-gray-700 w-40">Lorelei</span>
+                        <div class="flex gap-4">
+                            <label class="flex items-center cursor-pointer">
+                                <input type="radio" name="assign-Lorelei" value="1" class="mr-2">
+                                <span>Team 1</span>
+                            </label>
+                            <label class="flex items-center cursor-pointer">
+                                <input type="radio" name="assign-Lorelei" value="2" class="mr-2">
+                                <span>Team 2</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between py-2">
+                        <span class="font-medium text-gray-700 w-40">Uncle Giant</span>
+                        <div class="flex gap-4">
+                            <label class="flex items-center cursor-pointer">
+                                <input type="radio" name="assign-Uncle Giant" value="1" class="mr-2">
+                                <span>Team 1</span>
+                            </label>
+                            <label class="flex items-center cursor-pointer">
+                                <input type="radio" name="assign-Uncle Giant" value="2" class="mr-2">
+                                <span>Team 2</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Teams Section -->
+            <div class="section-header">Team Names & Additional Members</div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <!-- Team 1 -->
+                <div class="card">
+                    <h4 class="font-semibold text-lg text-gray-800 mb-3">Team 1</h4>
+                    <div class="mb-3">
+                        <label class="field-label">Team Name *</label>
+                        <input type="text" id="team1-name" required class="text-input" placeholder="Team Blue">
+                    </div>
+                    <div>
+                        <p class="text-sm font-medium text-gray-700 mb-2">Members assigned above:</p>
+                        <div id="team1-preview" class="text-sm text-gray-600 mb-3 p-2 bg-gray-50 rounded min-h-[60px]">
+                            <em>Select team assignments above</em>
+                        </div>
+                        <label class="field-label">Additional Members (optional, one per line)</label>
+                        <textarea id="team1-additional" class="textarea-input" placeholder="Guest players..." rows="3"></textarea>
+                        <p class="text-xs text-gray-500 mt-1">Only if you have guest/substitute players</p>
+                    </div>
+                </div>
+
+                <!-- Team 2 -->
+                <div class="card">
+                    <h4 class="font-semibold text-lg text-gray-800 mb-3">Team 2</h4>
+                    <div class="mb-3">
+                        <label class="field-label">Team Name *</label>
+                        <input type="text" id="team2-name" required class="text-input" placeholder="Team Red">
+                    </div>
+                    <div>
+                        <p class="text-sm font-medium text-gray-700 mb-2">Members assigned above:</p>
+                        <div id="team2-preview" class="text-sm text-gray-600 mb-3 p-2 bg-gray-50 rounded min-h-[60px]">
+                            <em>Select team assignments above</em>
+                        </div>
+                        <label class="field-label">Additional Members (optional, one per line)</label>
+                        <textarea id="team2-additional" class="textarea-input" placeholder="Guest players..." rows="3"></textarea>
+                        <p class="text-xs text-gray-500 mt-1">Only if you have guest/substitute players</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Games Section -->
+            <div class="section-header">Games (Minimum 3 Required)</div>
+            <div id="gamesContainer"></div>
+            <button type="button" onclick="addGame()" class="btn-primary mb-4">+ Add Game</button>
+
+            <!-- Media Section -->
+            <div class="section-header">Media (Optional)</div>
+
+            <div class="mb-4">
+                <label class="field-label">Images</label>
+                <textarea id="images" class="textarea-input" placeholder="image1.jpg&#10;image2.jpg&#10;image3.jpg" rows="3"></textarea>
+                <p class="text-xs text-gray-500 mt-1">One filename per line</p>
+            </div>
+
+            <div class="mb-4">
+                <label class="field-label">Videos</label>
+                <textarea id="videos" class="textarea-input" placeholder="video1.mp4&#10;video2.mp4" rows="3"></textarea>
+                <p class="text-xs text-gray-500 mt-1">One filename per line</p>
+            </div>
+
+            <!-- Results Section -->
+            <div class="section-header">Competition Results</div>
+
+            <div class="mb-4">
+                <label class="field-label">Winning Team *</label>
+                <select id="winners" required class="text-input">
+                    <option value="">-- Select winning team --</option>
+                </select>
+                <p class="text-xs text-gray-500 mt-1">Choose from the team names entered above</p>
+            </div>
+
+            <div class="mb-4">
+                <label class="field-label">Competition Narrative</label>
+                <textarea id="narratives" class="textarea-input" placeholder="Optional: Tell the story of this year's competition..." rows="6"></textarea>
+                <p class="text-xs text-gray-500 mt-1">Optional: Recap the competition highlights, memorable moments, etc. (supports markdown)</p>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="flex gap-4 mt-8 flex-wrap">
+                <button type="button" onclick="randomizeTeams()" class="btn-secondary">🎲 Randomize Teams</button>
+                <button type="button" onclick="generateJSON()" class="btn-success">Generate JSON</button>
+                <button type="button" onclick="saveToServer()" class="btn-primary">💾 Save to Server</button>
+                <button type="button" onclick="downloadJSON()" class="btn-secondary">Download JSON</button>
+                <button type="button" onclick="copyJSON()" class="btn-secondary">Copy to Clipboard</button>
+                <button type="reset" onclick="resetForm()" class="btn-danger">Reset Form</button>
+            </div>
+            <div id="saveStatus" class="mt-4"></div>
+        </form>
+
+        <!-- JSON Preview -->
+        <div class="mt-8 bg-white rounded-lg shadow-md p-6">
+            <h3 class="text-2xl font-bold text-blue-700 mb-4">JSON Preview</h3>
+            <pre id="jsonPreview" class="bg-gray-100 p-4 rounded-md overflow-x-auto text-sm"><code>Click "Generate JSON" to see the output...</code></pre>
+        </div>
+    </div>
+
+    <script>
+        let gameCount = 0;
+        let generatedJSON = null;
+        const REGULAR_PARTICIPANTS = ['Cat', 'Chad', 'Eddie', 'Grammy', 'J.D.', 'Lorelei', 'Uncle Giant'];
+
+        // Initialize with 3 games and random team assignments
+        window.onload = async () => {
+            // Add listeners to radio buttons to update previews
+            document.querySelectorAll('input[type="radio"]').forEach(radio => {
+                radio.addEventListener('change', updateTeamPreviews);
+            });
+
+            // Add listeners to team name inputs to update winner dropdown
+            document.getElementById('team1-name').addEventListener('input', updateWinnerDropdown);
+            document.getElementById('team2-name').addEventListener('input', updateWinnerDropdown);
+
+            // Check for year parameter in URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const yearParam = urlParams.get('year');
+            const yearToLoad = yearParam || new Date().getFullYear();
+
+            // Try to load existing data
+            const loaded = await loadYearData(yearToLoad);
+
+            // If no data loaded, initialize with defaults
+            if (!loaded) {
+                addGame();
+                addGame();
+                addGame();
+                randomizeTeams();
+            }
+        };
+
+        async function loadYearData(year) {
+            try {
+                const response = await fetch(`/api/load-year/${year}`);
+                const result = await response.json();
+
+                if (!result.success) {
+                    // Year doesn't exist, this is fine for new years
+                    console.log(`No data for ${year}, starting fresh`);
+                    document.getElementById('year').value = year;
+                    return false;
+                }
+
+                console.log(`📖 Loading data for ${year}...`);
+                populateFormWithData(result.data);
+                showLoadMessage(year);
+                return true;
+
+            } catch (error) {
+                console.error('Error loading year data:', error);
+                document.getElementById('year').value = year;
+                return false;
+            }
+        }
+
+        function populateFormWithData(data) {
+            // Basic fields
+            document.getElementById('year').value = data.year || '';
+            document.getElementById('ordinalName').value = data.ordinalName || '';
+            document.getElementById('teamScheme').value = data.teamScheme || '';
+            document.getElementById('challengeTheme').value = data.challengeTheme || '';
+            document.getElementById('narratives').value = data.narratives || '';
+
+            // Teams
+            if (data.teams && data.teams.length >= 2) {
+                document.getElementById('team1-name').value = data.teams[0].name || '';
+                document.getElementById('team2-name').value = data.teams[1].name || '';
+
+                // Populate team members by checking who's in each team
+                const team1Members = data.teams[0].members || [];
+                const team2Members = data.teams[1].members || [];
+
+                // Set radio buttons for regular participants
+                REGULAR_PARTICIPANTS.forEach(participant => {
+                    if (team1Members.includes(participant)) {
+                        const radio = document.querySelector(`input[name="assign-${participant}"][value="1"]`);
+                        if (radio) radio.checked = true;
+                    } else if (team2Members.includes(participant)) {
+                        const radio = document.querySelector(`input[name="assign-${participant}"][value="2"]`);
+                        if (radio) radio.checked = true;
+                    }
+                });
+
+                // Additional members (non-regulars)
+                const team1Additional = team1Members.filter(m => !REGULAR_PARTICIPANTS.includes(m));
+                const team2Additional = team2Members.filter(m => !REGULAR_PARTICIPANTS.includes(m));
+
+                document.getElementById('team1-additional').value = team1Additional.join('\n');
+                document.getElementById('team2-additional').value = team2Additional.join('\n');
+
+                updateTeamPreviews();
+                updateWinnerDropdown();
+            }
+
+            // Winner
+            if (data.winners) {
+                // Set winner after dropdown is populated
+                setTimeout(() => {
+                    document.getElementById('winners').value = data.winners;
+                }, 100);
+            }
+
+            // Games
+            if (data.games && data.games.length > 0) {
+                data.games.forEach((game, index) => {
+                    addGame();
+                    const gameNum = gameCount; // Use current gameCount
+                    document.getElementById(`game-${gameNum}-name`).value = game.name || '';
+                    document.getElementById(`game-${gameNum}-description`).value = game.description || '';
+                    document.getElementById(`game-${gameNum}-playByPlay`).value = game.playByPlay || '';
+                    document.getElementById(`game-${gameNum}-scoringTable`).value = game.scoringTable || '';
+                });
+            }
+
+            // Media
+            if (data.images && data.images.length > 0) {
+                document.getElementById('images').value = data.images.join('\n');
+            }
+            if (data.videos && data.videos.length > 0) {
+                document.getElementById('videos').value = data.videos.join('\n');
+            }
+        }
+
+        function showLoadMessage(year) {
+            const statusDiv = document.getElementById('saveStatus');
+            statusDiv.innerHTML = `<p class="text-blue-600 font-semibold">📖 Loaded data for ${year} - Edit and save to update</p>`;
+        }
+
+        function updateWinnerDropdown() {
+            const team1Name = document.getElementById('team1-name').value.trim();
+            const team2Name = document.getElementById('team2-name').value.trim();
+            const winnersSelect = document.getElementById('winners');
+            const currentValue = winnersSelect.value;
+
+            // Clear existing options except the first one
+            winnersSelect.innerHTML = '<option value="">-- Select winning team --</option>';
+
+            // Add team options if they have names
+            if (team1Name) {
+                const option1 = document.createElement('option');
+                option1.value = team1Name;
+                option1.textContent = team1Name;
+                winnersSelect.appendChild(option1);
+            }
+
+            if (team2Name) {
+                const option2 = document.createElement('option');
+                option2.value = team2Name;
+                option2.textContent = team2Name;
+                winnersSelect.appendChild(option2);
+            }
+
+            // Restore previous selection if it still exists
+            if (currentValue && (currentValue === team1Name || currentValue === team2Name)) {
+                winnersSelect.value = currentValue;
+            }
+        }
+
+        function randomizeTeams() {
+            // Shuffle the participants array
+            const shuffled = [...REGULAR_PARTICIPANTS].sort(() => Math.random() - 0.5);
+
+            // Randomly decide which team gets 4 members (0 or 1)
+            const team1Count = Math.random() < 0.5 ? 4 : 3;
+
+            // Assign first N to team 1, rest to team 2
+            shuffled.forEach((participant, index) => {
+                const teamNum = index < team1Count ? '1' : '2';
+                const radio = document.querySelector(`input[name="assign-${participant}"][value="${teamNum}"]`);
+                if (radio) radio.checked = true;
+            });
+
+            updateTeamPreviews();
+        }
+
+        function updateTeamPreviews() {
+            const team1Members = [];
+            const team2Members = [];
+
+            REGULAR_PARTICIPANTS.forEach(participant => {
+                const selected = document.querySelector(`input[name="assign-${participant}"]:checked`);
+                if (selected) {
+                    if (selected.value === '1') {
+                        team1Members.push(participant);
+                    } else {
+                        team2Members.push(participant);
+                    }
+                }
+            });
+
+            document.getElementById('team1-preview').innerHTML =
+                team1Members.length > 0
+                    ? team1Members.join(', ')
+                    : '<em>No members assigned</em>';
+
+            document.getElementById('team2-preview').innerHTML =
+                team2Members.length > 0
+                    ? team2Members.join(', ')
+                    : '<em>No members assigned</em>';
+        }
+
+
+        function addGame() {
+            gameCount++;
+            const container = document.getElementById('gamesContainer');
+            const gameDiv = document.createElement('div');
+            gameDiv.className = 'card';
+            gameDiv.id = `game-${gameCount}`;
+            gameDiv.innerHTML = `
+                <div class="flex justify-between items-start mb-3">
+                    <h4 class="font-semibold text-lg text-gray-800">Game #${gameCount}</h4>
+                    <button type="button" onclick="removeGame(${gameCount})" class="text-red-600 hover:text-red-800">✕ Remove</button>
+                </div>
+                <div class="mb-3">
+                    <label class="field-label">Game Name *</label>
+                    <input type="text" id="game-${gameCount}-name" required class="text-input" placeholder="Trivia Challenge">
+                </div>
+                <div class="mb-3">
+                    <label class="field-label">Description *</label>
+                    <textarea id="game-${gameCount}-description" required class="textarea-input" placeholder="Describe the game rules and format..." rows="3"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label class="field-label">Play-by-Play (Optional)</label>
+                    <textarea id="game-${gameCount}-playByPlay" class="textarea-input" placeholder="Detailed play-by-play narrative (supports markdown)..." rows="4"></textarea>
+                </div>
+                <div>
+                    <label class="field-label">Scoring Table (Optional)</label>
+                    <textarea id="game-${gameCount}-scoringTable" class="textarea-input" placeholder="Markdown table with scores..." rows="4"></textarea>
+                    <p class="text-xs text-gray-500 mt-1">Use markdown table format</p>
+                </div>
+            `;
+            container.appendChild(gameDiv);
+        }
+
+        function removeGame(id) {
+            const element = document.getElementById(`game-${id}`);
+            if (element) element.remove();
+        }
+
+        function getTeams() {
+            const teams = [];
+
+            // Get assigned members for each team
+            const team1Members = [];
+            const team2Members = [];
+
+            REGULAR_PARTICIPANTS.forEach(participant => {
+                const selected = document.querySelector(`input[name="assign-${participant}"]:checked`);
+                if (selected) {
+                    if (selected.value === '1') {
+                        team1Members.push(participant);
+                    } else {
+                        team2Members.push(participant);
+                    }
+                }
+            });
+
+            // Team 1
+            const team1Name = document.getElementById('team1-name')?.value.trim();
+            const team1Additional = document.getElementById('team1-additional')?.value.trim();
+            if (team1Name) {
+                const members = [...team1Members];
+                if (team1Additional) {
+                    const additionalMembers = team1Additional.split('\n')
+                        .map(m => m.trim())
+                        .filter(m => m.length > 0);
+                    members.push(...additionalMembers);
+                }
+                teams.push({ name: team1Name, members });
+            }
+
+            // Team 2
+            const team2Name = document.getElementById('team2-name')?.value.trim();
+            const team2Additional = document.getElementById('team2-additional')?.value.trim();
+            if (team2Name) {
+                const members = [...team2Members];
+                if (team2Additional) {
+                    const additionalMembers = team2Additional.split('\n')
+                        .map(m => m.trim())
+                        .filter(m => m.length > 0);
+                    members.push(...additionalMembers);
+                }
+                teams.push({ name: team2Name, members });
+            }
+
+            return teams;
+        }
+
+        function getGames() {
+            const games = [];
+            for (let i = 1; i <= gameCount; i++) {
+                const gameElement = document.getElementById(`game-${i}`);
+                if (!gameElement) continue;
+
+                const name = document.getElementById(`game-${i}-name`)?.value.trim();
+                const description = document.getElementById(`game-${i}-description`)?.value.trim();
+                const playByPlay = document.getElementById(`game-${i}-playByPlay`)?.value.trim();
+                const scoringTable = document.getElementById(`game-${i}-scoringTable`)?.value.trim();
+
+                if (name && description) {
+                    const game = { name, description };
+                    if (playByPlay) game.playByPlay = playByPlay;
+                    if (scoringTable) game.scoringTable = scoringTable;
+                    games.push(game);
+                }
+            }
+            return games;
+        }
+
+        function getArrayFromTextarea(id) {
+            const text = document.getElementById(id)?.value.trim();
+            if (!text) return undefined;
+            return text.split('\n')
+                .map(line => line.trim())
+                .filter(line => line.length > 0);
+        }
+
+        function generateJSON() {
+            const data = collectFormData();
+            if (!data) return;
+
+            // Store and display
+            generatedJSON = JSON.stringify(data, null, 2);
+            document.getElementById('jsonPreview').innerHTML = `<code>${escapeHtml(generatedJSON)}</code>`;
+
+            // Scroll to preview
+            document.getElementById('jsonPreview').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+
+        async function saveToServer() {
+            // Generate the JSON data first
+            const data = collectFormData();
+            if (!data) return;
+
+            const statusDiv = document.getElementById('saveStatus');
+            statusDiv.innerHTML = '<p class="text-blue-600">💾 Saving to server...</p>';
+
+            try {
+                // Check if file already exists
+                const checkResponse = await fetch(`/api/check-year/${data.year}`);
+                const { exists } = await checkResponse.json();
+
+                if (exists) {
+                    if (!confirm(`File ${data.year}.json already exists. Overwrite?`)) {
+                        statusDiv.innerHTML = '<p class="text-gray-600">Save cancelled.</p>';
+                        return;
+                    }
+                }
+
+                // Save to server
+                const response = await fetch('/api/save-year', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                });
+
+                const result = await response.json();
+
+                if (result.success) {
+                    statusDiv.innerHTML = `<p class="text-green-600 font-semibold">✅ ${result.message}</p><p class="text-sm text-gray-600">File saved to: ${result.filePath}</p>`;
+
+                    // Also update the preview
+                    generatedJSON = JSON.stringify(data, null, 2);
+                    document.getElementById('jsonPreview').innerHTML = `<code>${escapeHtml(generatedJSON)}</code>`;
+                } else {
+                    statusDiv.innerHTML = `<p class="text-red-600">❌ Error: ${result.error}</p>`;
+                }
+            } catch (error) {
+                statusDiv.innerHTML = `<p class="text-red-600">❌ Error saving to server: ${error.message}</p><p class="text-sm text-gray-600">Make sure the server is running (npm run form-server)</p>`;
+            }
+        }
+
+        function collectFormData() {
+            // Gather all data
+            const data = {
+                year: parseInt(document.getElementById('year').value),
+                ordinalName: document.getElementById('ordinalName').value.trim(),
+                teamScheme: document.getElementById('teamScheme').value.trim(),
+                challengeTheme: document.getElementById('challengeTheme').value.trim(),
+                winners: document.getElementById('winners').value, // Already returns selected value
+                games: getGames(),
+                teams: getTeams()
+            };
+
+            // Optional fields
+            const narratives = document.getElementById('narratives').value.trim();
+            if (narratives) data.narratives = narratives;
+
+            const images = getArrayFromTextarea('images');
+            if (images && images.length > 0) data.images = images;
+
+            const videos = getArrayFromTextarea('videos');
+            if (videos && videos.length > 0) data.videos = videos;
+
+            // Validate
+            if (!data.year || !data.ordinalName || !data.teamScheme || !data.challengeTheme) {
+                alert('Please fill out all required fields (marked with *)');
+                return null;
+            }
+
+            if (!data.winners) {
+                alert('Please select the winning team');
+                return null;
+            }
+
+            if (data.teams.length !== 2) {
+                alert('Please fill out both teams');
+                return null;
+            }
+
+            if (data.games.length < 3) {
+                alert('Please add at least 3 games');
+                return null;
+            }
+
+            return data;
+        }
+
+        function downloadJSON() {
+            if (!generatedJSON) {
+                alert('Please generate JSON first');
+                return;
+            }
+
+            const year = document.getElementById('year').value;
+            const blob = new Blob([generatedJSON], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `${year}.json`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+
+        function copyJSON() {
+            if (!generatedJSON) {
+                alert('Please generate JSON first');
+                return;
+            }
+
+            navigator.clipboard.writeText(generatedJSON).then(() => {
+                alert('JSON copied to clipboard!');
+            }).catch(err => {
+                alert('Failed to copy: ' + err);
+            });
+        }
+
+        function resetForm() {
+            if (confirm('Are you sure you want to reset the form? All data will be lost.')) {
+                document.getElementById('yearDataForm').reset();
+                document.getElementById('gamesContainer').innerHTML = '';
+                document.getElementById('jsonPreview').innerHTML = '<code>Click "Generate JSON" to see the output...</code>';
+                gameCount = 0;
+                generatedJSON = null;
+                addGame();
+                addGame();
+                addGame();
+                randomizeTeams();
+            }
+        }
+
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+    </script>
+</body>
+</html>

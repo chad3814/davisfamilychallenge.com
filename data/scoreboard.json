@@ -1,59 +1,82 @@
 {
   "entries": [
     {
-      "participant": "Captain",
+      "participant": "Meredith",
       "record": {
-        "wins": 9,
-        "losses": 6,
-        "winningPercentage": 0.6
-      }
+        "wins": 2,
+        "losses": 1
+      },
+      "show": false
     },
     {
-      "participant": "Cat",
+      "participant": "J.D.",
       "record": {
-        "wins": 10,
-        "losses": 9,
-        "winningPercentage": 0.526
+        "wins": 12,
+        "losses": 7
       }
     },
     {
       "participant": "Chad",
       "record": {
         "wins": 12,
-        "losses": 7,
-        "winningPercentage": 0.632
+        "losses": 7
       }
     },
     {
-      "participant": "Eddie",
+      "participant": "Captain",
       "record": {
-        "wins": 4,
-        "losses": 8,
-        "winningPercentage": 0.333
+        "wins": 9,
+        "losses": 6
+      }
+    },
+    {
+      "participant": "Lorelei",
+      "record": {
+        "wins": 11,
+        "losses": 8
+      }
+    },
+    {
+      "participant": "Uncle Giant",
+      "record": {
+        "wins": 10,
+        "losses": 9
+      }
+    },
+    {
+      "participant": "Cat",
+      "record": {
+        "wins": 10,
+        "losses": 9
       }
     },
     {
       "participant": "Grammy",
       "record": {
         "wins": 7,
-        "losses": 12,
-        "winningPercentage": 0.368
+        "losses": 12
       }
     },
     {
-      "participant": "J.D.",
+      "participant": "Steph",
       "record": {
-        "wins": 12,
-        "losses": 7,
-        "winningPercentage": 0.632
+        "wins": 1,
+        "losses": 2
+      },
+      "show": false
+    },
+    {
+      "participant": "Eddie",
+      "record": {
+        "wins": 3,
+        "losses": 11
       }
     },
     {
       "participant": "Jenelle",
       "record": {
         "wins": 0,
-        "losses": 2,
-        "winningPercentage": 0.0
+        "losses": 2
       },
       "show": false
     },
@@ -61,25 +84,7 @@
       "participant": "Katie",
       "record": {
         "wins": 0,
-        "losses": 1,
-        "winningPercentage": 0.0
-      },
-      "show": false
-    },
-    {
-      "participant": "Lorelei",
-      "record": {
-        "wins": 10,
-        "losses": 9,
-        "winningPercentage": 0.526
-      }
-    },
-    {
-      "participant": "Meredith",
-      "record": {
-        "wins": 0,
-        "losses": 1,
-        "winningPercentage": 0.0
+        "losses": 1
       },
       "show": false
     },
@@ -87,28 +92,10 @@
       "participant": "Shep",
       "record": {
         "wins": 0,
-        "losses": 1,
-        "winningPercentage": 0.0
+        "losses": 1
       },
       "show": false
-    },
-    {
-      "participant": "Steph",
-      "record": {
-        "wins": 1,
-        "losses": 2,
-        "winningPercentage": 0.333
-      },
-      "show": false
-    },
-    {
-      "participant": "Uncle Giant",
-      "record": {
-        "wins": 10,
-        "losses": 9,
-        "winningPercentage": 0.526
-      }
     }
   ],
-  "lastUpdated": "2024-12-22"
+  "lastUpdated": "2025-12-23"
 }

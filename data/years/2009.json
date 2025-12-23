@@ -3,24 +3,24 @@
   "ordinalName": "Fourth Annual Davis Family Challenge",
   "teamScheme": "Marriage",
   "challengeTheme": "Misc.",
-  "winners": "Unmarried Team",
+  "winners": "Unmarried",
   "games": [
     {
       "name": "Boom Blox",
-      "description": "Started with the throwing Boom Blox games, and the Married Team ended with a score 3,616 to the Unmarried Team's 2,859. In the second round we played the attack games, and the Unmarried Team beat the Married Team 6-2. In the final battle it was a grab game, but our non-dominate hands! The Unmarried Team pulled it out in the end with 161 vs the Married Team's 100."
+      "description": "Started with the throwing Boom Blox games, and Married ended with a score 3,616 to Unmarried's 2,859. In the second round we played the attack games, and Unmarried beat Married 6-2. In the final battle it was a grab game, but our non-dominate hands! Unmarried pulled it out in the end with 161 vs Married's 100."
     },
     {
       "name": "Dart",
-      "description": "Played the best two out of three games of 301. The Unmarried Team beat the Married Team in the first and third games for the win."
+      "description": "Played the best two out of three games of 301. Unmarried beat Married in the first and third games for the win."
     },
     {
       "name": "Cubs Yahtzee",
-      "description": "The Married Team smashed their opponents with the final score of 263 vs the Unmarried Team's 169."
+      "description": "Married smashed their opponents with the final score of 263 vs Unmarried's 169."
     }
   ],
   "teams": [
     {
-      "name": "Maried",
+      "name": "Married",
       "members": [
         "Captain",
         "Grammy",
@@ -29,7 +29,7 @@
       ]
     },
     {
-      "name": "Unmaried",
+      "name": "Unmarried",
       "members": [
         "Uncle Giant",
         "J.D.",

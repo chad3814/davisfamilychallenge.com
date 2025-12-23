@@ -132,6 +132,7 @@ export function isParticipantRecord(data: unknown): data is ParticipantRecord {
   return (
     typeof obj.wins === 'number' &&
     typeof obj.losses === 'number' &&
-    typeof obj.winningPercentage === 'number'
+    // winningPercentage is calculated, not stored
+    (obj.winningPercentage === undefined || typeof obj.winningPercentage === 'number')
   );
 }

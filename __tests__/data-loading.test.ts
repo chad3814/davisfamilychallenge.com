@@ -118,25 +118,24 @@ describe('Hidden Participants Feature - Data Structure', () => {
       });
     });
 
-    it('should have correct winning percentages for new participants', () => {
+    it('should calculate winning percentages correctly', () => {
       const data = getScoreboardData();
 
-      const steph = data.entries.find(e => e.participant === 'Steph');
-      expect(steph?.record.winningPercentage).toBe(0.333);
+      // Check some participants with known records
+      const meredith = data.entries.find(e => e.participant === 'Meredith');
+      expect(meredith?.record.winningPercentage).toBeCloseTo(0.667, 3); // 2-1
 
-      const katie = data.entries.find(e => e.participant === 'Katie');
-      expect(katie?.record.winningPercentage).toBe(0.0);
+      const jd = data.entries.find(e => e.participant === 'J.D.');
+      expect(jd?.record.winningPercentage).toBeCloseTo(0.632, 3); // 12-7
 
       const jenelle = data.entries.find(e => e.participant === 'Jenelle');
-      expect(jenelle?.record.winningPercentage).toBe(0.0);
-
-      const meredith = data.entries.find(e => e.participant === 'Meredith');
-      expect(meredith?.record.winningPercentage).toBe(0.0);
+      expect(jenelle?.record.winningPercentage).toBe(0.0); // 0-2
     });
 
-    it('should not have updated lastUpdated date', () => {
+    it('should have lastUpdated date in correct format', () => {
       const data = getScoreboardData();
-      expect(data.lastUpdated).toBe('2024-12-22');
+      // Check format is YYYY-MM-DD
+      expect(data.lastUpdated).toMatch(/^\d{4}-\d{2}-\d{2}$/);
     });
   });
 });
