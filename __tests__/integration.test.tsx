@@ -5,14 +5,16 @@ import { getScoreboardData } from '@/lib/data';
 
 describe('Integration Tests', () => {
   describe('HomePage Integration', () => {
-    it('should render the main title', () => {
-      render(<HomePage />);
+    it('should render the main title', async () => {
+      const element = await HomePage();
+      render(element);
       const title = screen.getByRole('heading', { name: 'Davis Family Challenge', level: 1 });
       expect(title).toBeInTheDocument();
     });
 
-    it('should display scoreboard with lifetime records', () => {
-      render(<HomePage />);
+    it('should display scoreboard with lifetime records', async () => {
+      const element = await HomePage();
+      render(element);
 
       // Check scoreboard section exists
       expect(screen.getByText('Lifetime Records')).toBeInTheDocument();
@@ -25,15 +27,17 @@ describe('Integration Tests', () => {
       }
     });
 
-    it('should display Games Played column in scoreboard', () => {
-      render(<HomePage />);
+    it('should display Games Played column in scoreboard', async () => {
+      const element = await HomePage();
+      render(element);
 
       // Check for Games Played header (consolidated scoreboard)
       expect(screen.getByText('Games Played')).toBeInTheDocument();
     });
 
-    it('should render year summary cards for only 3 recent years', () => {
-      render(<HomePage />);
+    it('should render year summary cards for only 3 recent years', async () => {
+      const element = await HomePage();
+      render(element);
 
       // Check that yearly results section exists
       expect(screen.getByText('Yearly Results')).toBeInTheDocument();
@@ -51,8 +55,9 @@ describe('Integration Tests', () => {
       expect(screen.queryByText('2021')).not.toBeInTheDocument();
     });
 
-    it('should display hero image with correct attributes', () => {
-      const { container } = render(<HomePage />);
+    it('should display hero image with correct attributes', async () => {
+      const element = await HomePage();
+      const { container } = render(element);
 
       const images = container.querySelectorAll('img');
       const plaqueImage = Array.from(images).find(img =>
@@ -62,8 +67,9 @@ describe('Integration Tests', () => {
       expect(plaqueImage?.getAttribute('src')).toContain('plaque.jpg');
     });
 
-    it('should have links to year detail pages', () => {
-      const { container } = render(<HomePage />);
+    it('should have links to year detail pages', async () => {
+      const element = await HomePage();
+      const { container } = render(element);
 
       // Check for year links
       const yearLinks = container.querySelectorAll('a[href*="/2024"]');
@@ -105,16 +111,18 @@ describe('Integration Tests', () => {
   });
 
   describe('Component Integration', () => {
-    it('should display scoreboard and year summaries together on homepage', () => {
-      render(<HomePage />);
+    it('should display scoreboard and year summaries together on homepage', async () => {
+      const element = await HomePage();
+      render(element);
 
       // Both sections should be present
       expect(screen.getByText('Lifetime Records')).toBeInTheDocument();
       expect(screen.getByText('Yearly Results')).toBeInTheDocument();
     });
 
-    it('should apply blue color scheme consistently', () => {
-      const { container } = render(<HomePage />);
+    it('should apply blue color scheme consistently', async () => {
+      const element = await HomePage();
+      const { container } = render(element);
 
       // Check for blue color classes
       const blueElements = container.querySelectorAll('[class*="blue"]');

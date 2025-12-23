@@ -16,8 +16,10 @@ export default function AllYearsPage() {
 
   useEffect(() => {
     // Load all year data
-    const data = years.map(year => getYearData(year));
-    setYearsData(data);
+    (async () => {
+      const data = await Promise.all(years.map(year => getYearData(year)));
+      setYearsData(data);
+    })();
   }, [years]);
 
   useEffect(() => {

@@ -3,10 +3,9 @@ import { YearData } from '@/types';
 
 interface YearSummaryCardProps {
   data: YearData;
-  hideGameDescriptions?: boolean;
 }
 
-export default function YearSummaryCard({ data, hideGameDescriptions = false }: YearSummaryCardProps) {
+export default function YearSummaryCard({ data }: YearSummaryCardProps) {
   return (
     <div className="border border-blue-500 rounded-lg p-6 mb-8 bg-white shadow-sm">
       <h3 className="text-2xl font-bold mb-4 text-center">

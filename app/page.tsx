@@ -4,12 +4,12 @@ import Scoreboard from '@/components/Scoreboard';
 import YearSummaryCard from '@/components/YearSummaryCard';
 import { getScoreboardData, getYearData } from '@/lib/data';
 
-export default function HomePage() {
+export default async function HomePage() {
   const scoreboardData = getScoreboardData();
 
   // Show only last 3 years on homepage
   const recentYears = [2024, 2023, 2022];
-  const yearsData = recentYears.map(year => getYearData(year));
+  const yearsData = await Promise.all(recentYears.map(year => getYearData(year)));
 
   return (
     <Layout>
@@ -37,7 +37,7 @@ export default function HomePage() {
         <div className="mt-12">
           <h2 className="text-3xl font-bold text-center mb-8">Yearly Results</h2>
           {yearsData.map((yearData) => (
-            <YearSummaryCard key={yearData.year} data={yearData} hideGameDescriptions />
+            <YearSummaryCard key={yearData.year} data={yearData} />
           ))}
         </div>
       </div>

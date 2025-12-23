@@ -83,7 +83,7 @@ describe('Integration Workflows', () => {
 
   describe('Year Summary Card workflow', () => {
     it('should hide game descriptions when hideGameDescriptions prop is true', () => {
-      render(<YearSummaryCard data={mockYearData} hideGameDescriptions={true} />);
+      render(<YearSummaryCard data={mockYearData} />);
 
       // Should show game names
       expect(screen.getByText('Head Hoops')).toBeInTheDocument();

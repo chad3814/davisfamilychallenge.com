@@ -31,13 +31,13 @@ export function getScoreboardData(): ScoreboardData {
 /**
  * Load specific year data with runtime validation
  */
-export function getYearData(year: number): YearData {
+export async function getYearData(year: number): Promise<YearData> {
   if (!VALID_YEARS.includes(year as Year)) {
     throw new Error(`Invalid year: ${year}. Must be between 2006 and 2024.`);
   }
 
   try {
-    const yearData = require(`@/data/years/${year}.json`);
+    const yearData = await import(`@/data/years/${year}.json`);
 
     if (!isYearData(yearData)) {
       throw new Error(`Invalid data structure for year ${year}`);

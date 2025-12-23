@@ -1,5 +1,4 @@
 import { getScoreboardData, getYearData, getAllYears, getYearsList } from '@/lib/data';
-import { ScoreboardData, YearData } from '@/types';
 
 describe('Data Loading Functions', () => {
   describe('getScoreboardData', () => {
@@ -26,8 +25,8 @@ describe('Data Loading Functions', () => {
   });
 
   describe('getYearData', () => {
-    it('should return valid year data for 2024', () => {
-      const data = getYearData(2024);
+    it('should return valid year data for 2024', async () => {
+      const data = await getYearData(2024);
       expect(data).toBeDefined();
       expect(data.year).toBe(2024);
       expect(data.ordinalName).toBeDefined();
@@ -38,15 +37,17 @@ describe('Data Loading Functions', () => {
       expect(data.teams).toBeInstanceOf(Array);
     });
 
-    it('should return valid year data for 2006', () => {
-      const data = getYearData(2006);
+    it('should return valid year data for 2006', async () => {
+      const data = await getYearData(2006);
       expect(data).toBeDefined();
       expect(data.year).toBe(2006);
     });
 
-    it('should throw error for invalid year', () => {
-      expect(() => getYearData(2025)).toThrow();
-      expect(() => getYearData(2005)).toThrow();
+    it('should throw error for invalid year', async () => {
+      const lastYear = Math.max(...getAllYears());
+      const firstYear = 2006;
+      await expect(getYearData(lastYear + 1)).rejects.toThrow();
+      await expect(getYearData(firstYear - 1)).rejects.toThrow();
     });
   });
 

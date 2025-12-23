@@ -76,16 +76,11 @@ export function calculateStandings(entries: ScoreboardEntry[]): ScoreboardEntry[
   // Calculate standings with tie-handling
   let currentStanding = 1;
   let previousPercentage: number | null = null;
-  let tieCount = 0;
 
   return sorted.map((entry, index) => {
     if (previousPercentage === null || entry.record.winningPercentage !== previousPercentage) {
       // New percentage - update standing
       currentStanding = index + 1;
-      tieCount = 1;
-    } else {
-      // Tie - keep same standing and increment tie count
-      tieCount++;
     }
 
     previousPercentage = entry.record.winningPercentage;

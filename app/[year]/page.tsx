@@ -22,7 +22,7 @@ export function generateStaticParams() {
 export default async function YearPage({ params }: YearPageProps) {
   const resolvedParams = await params;
   const year = parseInt(resolvedParams.year, 10);
-  const yearData = getYearData(year as Year);
+  const yearData = await getYearData(year as Year);
 
   return (
     <Layout>
